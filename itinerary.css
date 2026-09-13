@@ -1,0 +1,35 @@
+.detail-dialog.has-plan { width:min(1260px,calc(100% - 24px)); }
+.plan-wrap { overflow-x:auto; overscroll-behavior-x:contain; margin-top:18px; border:1px solid #c9ccc3; }
+.plan-table { width:100%; min-width:980px; border-collapse:collapse; font-size:1rem; line-height:1.65; }
+.plan-table caption { text-align:left; padding:12px 16px; font-weight:600; }
+.plan-table th,.plan-table td { padding:14px; border:1px solid #d8d9cf; text-align:left; vertical-align:top; }
+.plan-table thead th { background:var(--ink); color:white; }
+.plan-table tbody th { min-width:100px; background:#eee8da; }
+.plan-table td:nth-child(2) { min-width:260px; }
+.plan-table td:nth-child(3) { min-width:180px; }
+.plan-table td:nth-child(4),.plan-table td:nth-child(5) { min-width:150px; }
+.plan-table td:last-child { min-width:110px; }
+.plan-table tbody tr:nth-child(even) td { background:#f3eee4; }
+.plan-hint,.plan-note { font-size:.875rem; line-height:1.7; color:#53656b; }
+.plan-wrap:focus-visible { outline:3px solid var(--red); outline-offset:2px; }
+@media(max-width:600px) {
+  .detail-dialog.has-plan { width:calc(100% - 12px); padding:54px 14px 24px; }
+  .plan-table tbody th { position:sticky; left:0; z-index:1; box-shadow:2px 0 4px #0001; }
+}
+.detail-dialog [hidden] { display:none !important; }
+.plan-table td:nth-child(2) { min-width:340px; white-space:normal; }
+.plan-extras { margin-top:28px; }
+.plan-extras section { border-top:1px solid #c9ccc3; padding:18px 0 4px; }
+.plan-extras h3 { font-size:1.2rem; line-height:1.5; margin:0 0 12px; }
+.plan-extras ul { padding-left:1.4em; margin:0 0 18px; }
+.plan-extras li { font-size:1rem; line-height:1.85; margin:10px 0; }
+.plan-sources { border-top:1px solid #c9ccc3; padding-top:16px; }
+.plan-sources summary { cursor:pointer; min-height:44px; font-size:1rem; font-weight:600; }
+.plan-sources a { color:#173d56; text-decoration:underline; text-underline-offset:3px; }
+.plan-table thead th:first-child { position:sticky; left:0; z-index:2; }
+.plan-note { background:#eee8da; padding:12px 14px; }
+body:has(dialog[open]) { overflow:hidden; }
+@media(max-width:600px) {
+  .plan-table td:nth-child(2) { min-width:260px; }
+  .plan-table tbody th { min-width:96px; max-width:110px; }
+}
