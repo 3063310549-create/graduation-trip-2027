@@ -1,7 +1,5 @@
 # 2027 毕业旅行
 
-GitHub Pages：main 分支，根目录。首页及10个独立行程页均为静态HTML。
+GitHub Pages 使用 main 分支根目录。首页连接 10 段旅程，每段旅程包含总览、预订、逐日、待办、行李和贴士。
 
-新版移除封面图片和装饰文案，使用直线连接地点。新疆为2027年1月5日至11日，7天6晚；日本为1月13日至26日。
-
-首页使用style.css，详情使用route-page.css。january.js保留内容数据；修改数据后需重新生成HTML。
+统一旅行数据位于 data/travelData.js；页面结构与交互位于 journal-tools.js；旅行手账样式位于 journal-tools.css。待办和行李勾选状态按旅程保存在当前浏览器。
