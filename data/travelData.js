@@ -1117,19 +1117,19 @@ const travelData = {
           "timeline": [
             {
               "place": "北京",
-              "time": "",
+              "time": "航班待定",
               "detail": "",
               "leg": ""
             },
             {
-              "place": "东京",
-              "time": "",
+              "place": "东京 · 入住",
+              "time": "抵达后",
               "detail": "",
               "leg": ""
             },
             {
-              "place": "浅草 / 隅田川",
-              "time": "",
+              "place": "浅草寺 / 浅草老街 / 隅田川",
+              "time": "有时间时（可选）",
               "detail": "",
               "leg": ""
             }
@@ -1160,19 +1160,19 @@ const travelData = {
           "timeline": [
             {
               "place": "明治神宫",
-              "time": "",
+              "time": "07:30—08:30",
               "detail": "",
               "leg": ""
             },
             {
               "place": "东京国立博物馆",
-              "time": "",
+              "time": "约10:00—12:30",
               "detail": "",
               "leg": ""
             },
             {
               "place": "谷中 / 根津",
-              "time": "",
+              "time": "下午",
               "detail": "",
               "leg": ""
             }
@@ -1214,8 +1214,8 @@ const travelData = {
             },
             {
               "place": "银山温泉",
-              "time": "",
-              "detail": "",
+              "time": "下午至晚上",
+              "detail": "入住；日落前后拍温泉街，晚上泡温泉",
               "leg": ""
             }
           ],
@@ -1245,25 +1245,25 @@ const travelData = {
             {
               "place": "银山温泉",
               "time": "早餐后",
-              "detail": "退房，包车直达仙台站",
-              "leg": "冬季车程按路况预留余量"
+              "detail": "",
+              "leg": ""
             },
             {
               "place": "仙台站",
               "time": "待定",
-              "detail": "换乘东北／北海道新干线",
+              "detail": "",
               "leg": ""
             },
             {
               "place": "新函馆北斗",
               "time": "待定",
-              "detail": "换乘JR到函馆",
+              "detail": "",
               "leg": ""
             },
             {
               "place": "函馆",
               "time": "晚间",
-              "detail": "入住休息",
+              "detail": "",
               "leg": ""
             }
           ],
@@ -1298,31 +1298,31 @@ const travelData = {
             {
               "place": "五稜郭 / 函馆奉行所",
               "time": "上午",
-              "detail": "游览城郭与奉行所，开放时间临行复核",
+              "detail": "",
               "leg": ""
             },
             {
               "place": "元町 / 教堂群",
               "time": "下午",
-              "detail": "历史街区步行",
+              "detail": "",
               "leg": ""
             },
             {
               "place": "八幡坂",
               "time": "下午",
-              "detail": "沿坡道拍照",
+              "detail": "",
               "leg": ""
             },
             {
               "place": "旧函馆区公会堂",
               "time": "下午",
-              "detail": "留意闭馆时间",
+              "detail": "",
               "leg": ""
             },
             {
               "place": "函馆山",
               "time": "傍晚",
-              "detail": "按天气与缆车运营决定上山",
+              "detail": "天气与缆车允许时上山",
               "leg": ""
             }
           ],
@@ -1360,31 +1360,31 @@ const travelData = {
             {
               "place": "函馆",
               "time": "上午",
-              "detail": "退房后包车出发",
+              "detail": "",
               "leg": ""
             },
             {
               "place": "昭和新山",
               "time": "下午",
-              "detail": "按道路与现场运营安排停留",
+              "detail": "",
               "leg": ""
             },
             {
               "place": "有珠山",
               "time": "下午",
-              "detail": "缆车与观景视天气及运营情况",
+              "detail": "",
               "leg": ""
             },
             {
               "place": "洞爷湖 / 羊蹄山",
               "time": "日落前至蓝调",
-              "detail": "停止赶景点，湖畔观景；羊蹄山可见度取决于天气",
+              "detail": "",
               "leg": ""
             },
             {
               "place": "洞爷湖温泉",
               "time": "晚上",
-              "detail": "入住湖畔温泉酒店",
+              "detail": "",
               "leg": ""
             }
           ],
@@ -1429,19 +1429,19 @@ const travelData = {
             {
               "place": "洞爷湖湖畔",
               "time": "上午",
-              "detail": "慢游、看湖景、早餐",
+              "detail": "",
               "leg": ""
             },
             {
               "place": "洞爷湖温泉",
               "time": "约10:30—11:00",
-              "detail": "从酒店包车出发",
+              "detail": "",
               "leg": ""
             },
             {
               "place": "札幌",
               "time": "下午",
-              "detail": "入住后开始市内游览",
+              "detail": "",
               "leg": ""
             }
           ],
@@ -1534,19 +1534,19 @@ const travelData = {
             {
               "place": "札幌",
               "time": "上午",
-              "detail": "乘JR出发，不更换酒店",
+              "detail": "",
               "leg": ""
             },
             {
               "place": "小樽 · 旧手宫线 / 色内",
               "time": "中午前后",
-              "detail": "历史街区步行",
+              "detail": "",
               "leg": ""
             },
             {
               "place": "小樽运河 / 港口",
               "time": "下午",
-              "detail": "运河与港口",
+              "detail": "",
               "leg": ""
             },
             {
@@ -1558,7 +1558,7 @@ const travelData = {
             {
               "place": "札幌",
               "time": "晚上",
-              "detail": "乘JR返回札幌住宿",
+              "detail": "",
               "leg": ""
             }
           ],
@@ -1599,37 +1599,37 @@ const travelData = {
             {
               "place": "札幌酒店",
               "time": "清晨",
-              "detail": "包车出发，按冬季路况倒推发车时间",
+              "detail": "",
               "leg": ""
             },
             {
               "place": "旭山动物园",
               "time": "约10:30—13:00",
-              "detail": "游览与午餐；开放和活动时间临行核对",
+              "detail": "",
               "leg": ""
             },
             {
               "place": "美瑛雪原 / Christmas Tree",
               "time": "下午",
-              "detail": "仅在允许停车位置观景，不进入私人农田",
+              "detail": "",
               "leg": ""
             },
             {
               "place": "白须瀑布",
               "time": "下午",
-              "detail": "视道路与剩余日照停留",
+              "detail": "",
               "leg": ""
             },
             {
               "place": "白金青池",
               "time": "点灯时段",
-              "detail": "确认当季点灯时间后观赏",
+              "detail": "",
               "leg": ""
             },
             {
               "place": "札幌酒店",
               "time": "夜间",
-              "detail": "同车直返，不在旭川住宿",
+              "detail": "",
               "leg": ""
             }
           ],
@@ -1673,15 +1673,15 @@ const travelData = {
           "duration": null,
           "timeline": [
             {
-              "place": "札幌",
+              "place": "札幌 · 休整 / 购物 / 补逛",
               "time": "白天",
-              "detail": "休息、购物或补看市内景点",
+              "detail": "",
               "leg": ""
             },
             {
-              "place": "札幌",
+              "place": "札幌酒店 · 整理次日行李",
               "time": "晚上",
-              "detail": "住札幌，整理次日飞东京的行李",
+              "detail": "",
               "leg": ""
             }
           ],
@@ -1713,27 +1713,27 @@ const travelData = {
           "duration": null,
           "timeline": [
             {
-              "place": "札幌",
+              "place": "札幌 · 前往机场",
               "time": "上午",
-              "detail": "退房并前往新千岁机场",
+              "detail": "",
               "leg": ""
             },
             {
               "place": "新千岁机场",
               "time": "班次待定",
-              "detail": "搭乘航班飞东京",
+              "detail": "",
               "leg": ""
             },
             {
-              "place": "东京",
+              "place": "东京酒店 · 入住",
               "time": "下午或晚上",
-              "detail": "入住酒店并放行李；抵达时间待航班确定",
+              "detail": "",
               "leg": ""
             },
             {
               "place": "东京塔",
               "time": "晚间（可选）",
-              "detail": "抵达不晚时看亮灯外观，晚到则直接休息",
+              "detail": "早抵且有体力时看亮灯外观",
               "leg": ""
             }
           ],
@@ -1772,25 +1772,25 @@ const travelData = {
             {
               "place": "晴空塔 / Solamachi",
               "time": "上午（约10:00—12:00）",
-              "detail": "看晴空塔并逛商场；是否登展望台按天气与兴趣决定",
+              "detail": "登塔视天气与兴趣",
               "leg": ""
             },
             {
-              "place": "新宿相机店",
+              "place": "新宿 · Map Camera / 北村写真机店",
               "time": "下午（约13:00—15:30）",
-              "detail": "逛Map Camera与北村写真机店，看新品和二手相机、镜头；时间有限可选一家",
+              "detail": "时间有限时选一家",
               "leg": ""
             },
             {
-              "place": "涩谷",
+              "place": "涩谷 · 购物 / 十字路口 / 晚餐",
               "time": "傍晚至晚上",
-              "detail": "逛街、看十字路口夜景并用晚餐",
+              "detail": "",
               "leg": ""
             },
             {
               "place": "东京塔 / 东京酒店",
               "time": "晚间（可选）",
-              "detail": "仅在16日晚未去且体力允许时补看东京塔外观，之后返回酒店",
+              "detail": "前晚未去且有体力时补看外观",
               "leg": ""
             }
           ],
@@ -1835,13 +1835,13 @@ const travelData = {
             {
               "place": "东京机场",
               "time": "待定",
-              "detail": "按实际航班提前办理出境手续",
+              "detail": "留足赴机场与出境手续时间",
               "leg": ""
             },
             {
               "place": "北京",
               "time": "待定",
-              "detail": "返程抵达",
+              "detail": "",
               "leg": ""
             }
           ],

@@ -174,7 +174,6 @@
         </button>
         <div class="day-detail" id="day-detail-${tripId}-${day.day}" ${index === 0 ? "" : "hidden"}>
           ${renderTimeline(day)}
-          ${day.description ? `<p class="day-description">${escapeHtml(day.description)}</p>` : ""}
           <div class="day-meta">${compactFacts([fact("住宿", day.accommodation?.area), fact("交通", day.transport), fact("预计里程", day.distance), fact("预计用时", day.duration)])}</div>
           <div class="detail-grid">${detailsList("景点", day.sights)}${detailsList("餐饮建议", day.food)}${detailsList("预约事项", day.reservations)}${detailsList("注意事项", day.notes)}${detailsList("天气 / 穿衣", day.weatherClothing)}</div>
         </div>
