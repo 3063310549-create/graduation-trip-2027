@@ -165,28 +165,6 @@
     }).join("")}</ol>`;
   }
 
-  // Map locations live with their timeline stop, so the map and written route share one order.
-  function mapPointsForDay(day) {
-    return (day.timeline || []).flatMap((stop) => stop.mapPoints || []).filter((point) =>
-      point && point.name && Number.isFinite(point.lat) && Number.isFinite(point.lng) &&
-      Math.abs(point.lat) <= 90 && Math.abs(point.lng) <= 180
-    );
-  }
-
-  const dayMapPoints = new Map(record.itinerary.map((day) => [String(day.day), mapPointsForDay(day)]));
-
-  function renderDayMap(day) {
-    const points = dayMapPoints.get(String(day.day));
-    if (!points?.length) return "";
-    return html`<section class="day-map-panel" data-map-day="${escapeHtml(day.day)}" aria-label="D${escapeHtml(day.day)} 地点地图">
-      <div class="day-map-heading"><div><span class="eyebrow">地点地图</span><h3>当天途经地点</h3></div><small>点按标记查看地点</small></div>
-      <div class="day-map-canvas" data-day-map role="region" aria-label="当天途经地点示意地图，地点顺序见下方列表"></div>
-      <p class="day-map-status" data-map-status aria-live="polite">展开后加载地图。</p>
-      <ol class="day-map-points">${points.map((point, index) => html`<li class="${point.optional ? "is-optional" : ""}"><span>${index + 1}</span>${escapeHtml(point.name)}${point.optional ? " <small>可选</small>" : ""}</li>`).join("")}</ol>
-      <p class="day-map-note">游览顺序示意，直线非导航路线；实际交通以当天导航为准。${points.some((point) => point.optional) ? "空心标记为可选地点，不参与连线。" : ""}<span data-overlap-note hidden>相近标记会稍作错位，细线指向实际位置。</span></p>
-    </section>`;
-  }
-
   function renderItinerary() {
     const cards = record.itinerary.map((day, index) => {
       const date = dateParts(day.date);
@@ -196,7 +174,6 @@
         </button>
         <div class="day-detail" id="day-detail-${tripId}-${day.day}" ${index === 0 ? "" : "hidden"}>
           ${renderTimeline(day)}
-          ${renderDayMap(day)}
           ${day.description ? `<p class="day-description">${escapeHtml(day.description)}</p>` : ""}
           <div class="day-meta">${compactFacts([fact("住宿", day.accommodation?.area), fact("交通", day.transport), fact("预计里程", day.distance), fact("预计用时", day.duration)])}</div>
           <div class="detail-grid">${detailsList("景点", day.sights)}${detailsList("餐饮建议", day.food)}${detailsList("预约事项", day.reservations)}${detailsList("注意事项", day.notes)}${detailsList("天气 / 穿衣", day.weatherClothing)}</div>
@@ -241,131 +218,6 @@
 
   const tabs = [...document.querySelectorAll("[data-tab]")];
   const panels = [...root.querySelectorAll("[data-panel]")];
-  const mapInstances = new WeakMap();
-  let leafletAssetsPromise;
-
-  function loadLeafletAssets() {
-    if (!leafletAssetsPromise) {
-      const stylesheet = new Promise((resolve, reject) => {
-        const link = document.createElement("link");
-        link.rel = "stylesheet";
-        link.href = "./vendor/leaflet/leaflet.css";
-        link.onload = resolve;
-        link.onerror = () => reject(new Error("Leaflet stylesheet failed to load"));
-        document.head.appendChild(link);
-      });
-      const script = new Promise((resolve, reject) => {
-        const element = document.createElement("script");
-        element.src = "./vendor/leaflet/leaflet.js";
-        element.onload = resolve;
-        element.onerror = () => reject(new Error("Leaflet script failed to load"));
-        document.head.appendChild(element);
-      });
-      leafletAssetsPromise = Promise.all([stylesheet, script]).then(() => {
-        if (!window.L?.map) throw new Error("Leaflet is unavailable");
-        return window.L;
-      });
-    }
-    return leafletAssetsPromise;
-  }
-
-  async function initDayMap(panel) {
-    const canvas = panel.querySelector("[data-day-map]");
-    if (!canvas || canvas.dataset.mapLoading === "true") return;
-    const existing = mapInstances.get(canvas);
-    if (existing) {
-      requestAnimationFrame(() => existing.invalidateSize());
-      return;
-    }
-    canvas.dataset.mapLoading = "true";
-    const status = panel.querySelector("[data-map-status]");
-    status.textContent = "地图加载中…";
-    let map;
-    try {
-      const L = await loadLeafletAssets();
-      // A user may have closed the card or switched tabs while the assets loaded.
-      if (!canvas.isConnected || canvas.closest(".day-detail")?.hidden || canvas.closest(".tab-panel")?.hidden) return;
-      const points = dayMapPoints.get(panel.dataset.mapDay);
-      if (!points?.length) return;
-      const isTouch = matchMedia("(pointer: coarse)").matches;
-      map = L.map(canvas, {
-        scrollWheelZoom: false,
-        dragging: !isTouch,
-        touchZoom: !isTouch,
-        doubleClickZoom: !isTouch,
-        boxZoom: !isTouch,
-        keyboard: true
-      });
-      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        maxZoom: 19,
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> contributors'
-      }).addTo(map);
-      const positions = points.map((point) => [point.lat, point.lng]);
-      const mainPositions = points.filter((point) => !point.optional).map((point) => [point.lat, point.lng]);
-      if (mainPositions.length > 1) L.polyline(mainPositions, { color: "#7a1f34", weight: 3, opacity: .8, dashArray: "6 7" }).addTo(map);
-      const markers = points.map((point, index) => {
-        const icon = L.divIcon({
-          className: "day-map-pin-shell",
-          html: `<span class="day-map-pin ${point.optional ? "is-optional" : ""}">${index + 1}</span>`,
-          iconSize: [32, 32], iconAnchor: [16, 16], popupAnchor: [0, -18]
-        });
-        return L.marker([point.lat, point.lng], { icon, title: point.name })
-          .bindPopup(`<strong>${escapeHtml(point.name)}</strong>${point.optional ? "<small>可选地点</small>" : ""}`, { maxWidth: 200 })
-          .addTo(map);
-      });
-      if (positions.length === 1) map.setView(positions[0], 14);
-      else map.fitBounds(L.latLngBounds(positions), { padding: [34, 34], maxZoom: 14 });
-      const overlapGuides = L.layerGroup().addTo(map);
-      const overlapNote = panel.querySelector("[data-overlap-note]");
-      function separateNearbyPins() {
-        overlapGuides.clearLayers();
-        const pixels = positions.map((position) => map.latLngToContainerPoint(position));
-        const shifts = positions.map(() => null);
-        // Keep the coordinates exact; only the clickable badges move when two are too close on screen.
-        for (let first = 0; first < pixels.length; first++) {
-          if (shifts[first]) continue;
-          for (let second = first + 1; second < pixels.length; second++) {
-            if (shifts[second]) continue;
-            const dx = pixels[second].x - pixels[first].x;
-            const dy = pixels[second].y - pixels[first].y;
-            const distance = Math.hypot(dx, dy);
-            if (distance >= 40) continue;
-            const sidewaysX = distance ? -dy / distance : 1;
-            const sidewaysY = distance ? dx / distance : 0;
-            shifts[first] = L.point(-22 * sidewaysX, -22 * sidewaysY);
-            shifts[second] = L.point(22 * sidewaysX, 22 * sidewaysY);
-            break;
-          }
-        }
-        shifts.forEach((shift, index) => {
-          if (!shift) {
-            markers[index].setLatLng(positions[index]);
-            return;
-          }
-          const displayPosition = map.containerPointToLatLng(pixels[index].add(shift));
-          markers[index].setLatLng(displayPosition);
-          L.polyline([positions[index], displayPosition], { color: "#7a1f34", weight: 1.5, opacity: .75, interactive: false }).addTo(overlapGuides);
-          L.circleMarker(positions[index], { radius: 3, color: "#7a1f34", fillColor: "#7a1f34", fillOpacity: 1, weight: 1, interactive: false }).addTo(overlapGuides);
-        });
-        overlapNote.hidden = !shifts.some(Boolean);
-      }
-      map.on("zoomend moveend resize", separateNearbyPins);
-      mapInstances.set(canvas, map);
-      status.hidden = true;
-      requestAnimationFrame(() => { map.invalidateSize(); separateNearbyPins(); });
-    } catch (_) {
-      if (map) map.remove();
-      status.textContent = "地图暂时无法加载，下方仍可查看地点顺序。";
-    } finally {
-      delete canvas.dataset.mapLoading;
-    }
-  }
-
-  function refreshVisibleMaps() {
-    if (root.querySelector('[data-panel="daily"]')?.hidden) return;
-    root.querySelectorAll(".day-accordion.is-open .day-map-panel").forEach(initDayMap);
-  }
-
   function activateTab(id, updateHash = true) {
     const selected = tabs.some((tab) => tab.dataset.tab === id) ? id : "overview";
     tabs.forEach((tab) => {
@@ -380,7 +232,6 @@
       panel.hidden = !active;
     });
     if (updateHash) history.replaceState(null, "", `#${selected}`);
-    if (selected === "daily") requestAnimationFrame(refreshVisibleMaps);
   }
   tabs.forEach((tab, index) => {
     tab.addEventListener("click", () => activateTab(tab.dataset.tab));
@@ -402,10 +253,6 @@
     card.classList.toggle("is-open", opening);
     toggle.setAttribute("aria-expanded", String(opening));
     detail.hidden = !opening;
-    if (opening) {
-      const mapPanel = detail.querySelector(".day-map-panel");
-      if (mapPanel) requestAnimationFrame(() => initDayMap(mapPanel));
-    }
   });
 
   function updateCounts() {
