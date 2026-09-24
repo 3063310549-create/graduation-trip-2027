@@ -152,6 +152,27 @@ h1, h2, h3, h4 { line-height: 1.35; }
 .day-timeline strong { font-size: 1rem; }
 .day-timeline p { margin: 3px 0 0; color: var(--muted); font-size: .9rem; }
 .day-timeline small { display: block; margin-top: 8px; color: var(--accent-deep); font-size: .78rem; }
+.day-map-panel { min-width: 0; margin: 2px 0 22px; padding: 18px; border: 1px solid #e9dece; border-radius: 18px; background: var(--cream-2); }
+.day-map-heading { display: flex; align-items: end; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.day-map-heading .eyebrow { display: block; margin-bottom: 2px; font-size: .72rem; }
+.day-map-heading h3 { margin: 0; font-size: 1.02rem; }
+.day-map-heading > small { color: var(--muted); font-size: .76rem; text-align: right; }
+.day-map-canvas { width: 100%; height: clamp(260px, 32vw, 320px); overflow: hidden; border: 1px solid #e2d6c6; border-radius: 14px; background: #ece9df; isolation: isolate; }
+.day-map-status { margin: 8px 0 0; color: var(--muted); font-size: .8rem; }
+.day-map-status[hidden] { display: none; }
+.day-map-points { display: flex; flex-wrap: wrap; gap: 8px 14px; margin: 13px 0 0; padding: 0; list-style: none; }
+.day-map-points li { display: inline-flex; align-items: center; gap: 5px; max-width: 100%; color: var(--ink); font-size: .82rem; }
+.day-map-points li > span { width: 20px; height: 20px; flex: 0 0 20px; display: grid; place-items: center; border-radius: 50%; background: var(--accent); color: #fff; font-size: .7rem; font-weight: 750; }
+.day-map-points li.is-optional > span { border: 1px dashed var(--accent); background: #fffdf8; color: var(--accent); }
+.day-map-points li small { color: var(--muted); font-size: .75rem; }
+.day-map-note { margin: 10px 0 0; color: var(--muted); font-size: .75rem; line-height: 1.5; }
+.day-map-pin-shell { border: 0; background: transparent; }
+.day-map-pin { width: 32px; height: 32px; display: grid; place-items: center; border: 2px solid #fffdf8; border-radius: 50%; background: var(--accent); color: #fff; box-shadow: 0 2px 8px rgba(39, 25, 23, .3); font: 750 14px/1 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+.day-map-pin.is-optional { border: 2px dashed var(--accent); background: #fffdf8; color: var(--accent); }
+.day-map-panel .leaflet-popup-content-wrapper { border-radius: 12px; }
+.day-map-panel .leaflet-popup-content { margin: 10px 13px; color: var(--ink); font: 600 13px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif; }
+.day-map-panel .leaflet-popup-content small { display: block; margin-top: 2px; color: var(--muted); font-weight: 400; }
+.day-map-panel .leaflet-touch .leaflet-bar a { width: 36px; height: 36px; line-height: 36px; }
 .day-description { margin: 6px 0 18px; padding: 15px 18px; background: var(--cream-2); border-radius: 14px; }
 .day-meta { margin: 18px 0; padding-top: 18px; border-top: 1px dashed var(--line); }
 .detail-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
@@ -205,6 +226,8 @@ input:checked + .custom-check { border-color: var(--accent); background: var(--a
   .day-pill { width: 44px; height: 44px; border-radius: 13px; }
   .day-detail { padding: 0 16px 20px; }
   .day-timeline li { grid-template-columns: 68px minmax(0, 1fr); gap: 10px; padding-left: 18px; }
+  .day-map-panel { padding: 12px; }
+  .day-map-canvas { height: 270px; }
   .detail-grid { grid-template-columns: 1fr; }
   .packing-items { grid-template-columns: 1fr; }
   .packing-group, .paper-card { padding: 20px; }
