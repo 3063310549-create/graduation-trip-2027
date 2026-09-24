@@ -127,7 +127,7 @@
         ${compactFacts([fact("座席", item.seat), fact("票价", item.price)])}${item.notes ? `<p class="card-note">${escapeHtml(item.notes)}</p>` : ""}</article>`;
     }
     if (type === "hotels") {
-      const nights = nightsBetween(item.checkInDate, item.checkOutDate);
+      const nights = item.nights ?? nightsBetween(item.checkInDate, item.checkOutDate);
       return html`<article class="booking-card"><header><div><span class="booking-code">${show(item.name, item.city || "酒店待确认")}</span><p>${show(item.city, "城市待确认")}</p></div>${statusBadge(item.status)}</header>
         ${compactFacts([fact("入住", dateParts(item.checkInDate).short), fact("退房", dateParts(item.checkOutDate).short), fact("晚数", nights === null ? null : `${nights}晚`), fact("地址", item.address), fact("入住时间", item.checkInTime), fact("退房时间", item.checkOutTime), fact("价格", item.price)])}
         ${item.notes ? `<p class="card-note">${escapeHtml(item.notes)}</p>` : ""}</article>`;

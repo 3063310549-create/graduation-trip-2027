@@ -6,15 +6,15 @@ const travelData = {
       "trip": {
         "id": "xinjiang",
         "title": "新疆 · 伊犁自驾",
-        "dateLabel": "1月5日—11日 · 7天6晚",
-        "monthLabel": "01.05",
+        "dateLabel": "日本行程之后 · 日期待定 · 7天6晚",
+        "monthLabel": "待定",
         "description": "赛里木湖、夏塔、库尔德宁；伊宁取还车。",
-        "order": 1,
-        "startDate": "2027-01-05",
-        "endDate": "2027-01-11",
+        "order": 2,
+        "startDate": null,
+        "endDate": null,
         "timezone": "Asia/Shanghai",
-        "note": "全程使用北京时间。伊宁取还车，赛里木湖、夏塔、库尔德宁均按景区自驾安排。",
-        "connectionNote": "1月12日：北京。1月13日：出发去日本。",
+        "note": "安排在日本行程之后，具体出发日期待定。保留D1—D7路线和原拟交通时刻；确定日期后复核航班、火车、住宿及景区自驾安排。",
+        "connectionNote": "",
         "overviewRefs": [
           [
             1,
@@ -54,7 +54,7 @@ const travelData = {
         {
           "id": "day-1",
           "day": 1,
-          "date": "2027-01-05",
+          "date": null,
           "title": "营口东 — 北京 — 伊宁",
           "description": "",
           "accommodation": {
@@ -92,7 +92,9 @@ const travelData = {
           "sights": [],
           "food": [],
           "reservations": [],
-          "notes": [],
+          "notes": [
+            "D1所列09:26火车及15:10航班是原拟时刻；确定新疆出发日期后，须重新核对车次、航班和北京站至机场的衔接。"
+          ],
           "weatherClothing": [],
           "bookingIds": [
             "flight-ca1255",
@@ -104,7 +106,7 @@ const travelData = {
         {
           "id": "day-2",
           "day": 2,
-          "date": "2027-01-06",
+          "date": null,
           "title": "伊宁 — 赛里木湖",
           "description": "",
           "accommodation": {
@@ -153,7 +155,7 @@ const travelData = {
         {
           "id": "day-3",
           "day": 3,
-          "date": "2027-01-07",
+          "date": null,
           "title": "赛里木湖 — 夏塔",
           "description": "",
           "accommodation": {
@@ -202,7 +204,7 @@ const travelData = {
         {
           "id": "day-4",
           "day": 4,
-          "date": "2027-01-08",
+          "date": null,
           "title": "夏塔景区自驾",
           "description": "",
           "accommodation": {
@@ -233,7 +235,7 @@ const travelData = {
         {
           "id": "day-5",
           "day": 5,
-          "date": "2027-01-09",
+          "date": null,
           "title": "夏塔 — 库尔德宁",
           "description": "",
           "accommodation": {
@@ -270,7 +272,7 @@ const travelData = {
         {
           "id": "day-6",
           "day": 6,
-          "date": "2027-01-10",
+          "date": null,
           "title": "库尔德宁全天游览",
           "description": "",
           "accommodation": {
@@ -307,7 +309,7 @@ const travelData = {
         {
           "id": "day-7",
           "day": 7,
-          "date": "2027-01-11",
+          "date": null,
           "title": "库尔德宁 — 伊宁 — 北京",
           "description": "",
           "accommodation": {
@@ -358,7 +360,7 @@ const travelData = {
           {
             "id": "flight-ca1255",
             "number": "CA1255",
-            "date": "2027-01-05",
+            "date": null,
             "airline": "国航",
             "departure": {
               "place": "北京首都机场",
@@ -375,7 +377,7 @@ const travelData = {
             "checkInReminder": null,
             "price": null,
             "status": "planned",
-            "notes": "计划中，尚未出票。",
+            "notes": "CA1255及15:10—20:25为原拟方案，改期后须核对该日期是否有合适班次；尚未出票。",
             "dayIds": [
               "day-1"
             ]
@@ -383,7 +385,7 @@ const travelData = {
           {
             "id": "flight-return-beijing",
             "number": null,
-            "date": "2027-01-11",
+            "date": null,
             "airline": "国航或南航",
             "departure": {
               "place": "伊宁机场",
@@ -400,7 +402,7 @@ const travelData = {
             "checkInReminder": null,
             "price": null,
             "status": "planned",
-            "notes": "具体班次与到达机场待确认。",
+            "notes": "计划D7晚返京，具体日期、航司和班次待确认。",
             "dayIds": [
               "day-7"
             ]
@@ -410,7 +412,7 @@ const travelData = {
           {
             "id": "train-yingkou-beijing",
             "number": null,
-            "date": "2027-01-05",
+            "date": null,
             "departure": {
               "place": "营口东",
               "time": "09:26"
@@ -423,7 +425,7 @@ const travelData = {
             "seat": null,
             "price": null,
             "status": "planned",
-            "notes": "计划中，尚未出票，车次待确认。",
+            "notes": "09:26—12:13为原拟时刻，改期后须核对车次与衔接；尚未出票。",
             "dayIds": [
               "day-1"
             ]
@@ -434,8 +436,8 @@ const travelData = {
             "id": "hotel-day-1",
             "name": null,
             "city": "伊宁",
-            "checkInDate": "2027-01-05",
-            "checkOutDate": "2027-01-06",
+            "checkInDate": null,
+            "checkOutDate": null,
             "address": null,
             "checkInTime": null,
             "checkOutTime": null,
@@ -444,14 +446,15 @@ const travelData = {
             "notes": "住宿区域已列入计划，具体酒店尚未预订。",
             "dayIds": [
               "day-1"
-            ]
+            ],
+            "nights": 1
           },
           {
             "id": "hotel-day-2",
             "name": null,
             "city": "景区星空营地（暂定）",
-            "checkInDate": "2027-01-06",
-            "checkOutDate": "2027-01-07",
+            "checkInDate": null,
+            "checkOutDate": null,
             "address": null,
             "checkInTime": null,
             "checkOutTime": null,
@@ -460,14 +463,15 @@ const travelData = {
             "notes": "住宿区域已列入计划，具体酒店尚未预订。",
             "dayIds": [
               "day-2"
-            ]
+            ],
+            "nights": 1
           },
           {
             "id": "hotel-day-3",
             "name": null,
             "city": "夏塔附近",
-            "checkInDate": "2027-01-07",
-            "checkOutDate": "2027-01-09",
+            "checkInDate": null,
+            "checkOutDate": null,
             "address": null,
             "checkInTime": null,
             "checkOutTime": null,
@@ -477,14 +481,15 @@ const travelData = {
             "dayIds": [
               "day-3",
               "day-4"
-            ]
+            ],
+            "nights": 2
           },
           {
             "id": "hotel-day-5",
             "name": null,
             "city": "库尔德宁景区内",
-            "checkInDate": "2027-01-09",
-            "checkOutDate": "2027-01-10",
+            "checkInDate": null,
+            "checkOutDate": null,
             "address": null,
             "checkInTime": null,
             "checkOutTime": null,
@@ -493,14 +498,15 @@ const travelData = {
             "notes": "住宿区域已列入计划，具体酒店尚未预订。",
             "dayIds": [
               "day-5"
-            ]
+            ],
+            "nights": 1
           },
           {
             "id": "hotel-day-6",
             "name": null,
             "city": "景区内或小镇，按游玩情况选择",
-            "checkInDate": "2027-01-10",
-            "checkOutDate": "2027-01-11",
+            "checkInDate": null,
+            "checkOutDate": null,
             "address": null,
             "checkInTime": null,
             "checkOutTime": null,
@@ -509,20 +515,21 @@ const travelData = {
             "notes": "住宿区域已列入计划，具体酒店尚未预订。",
             "dayIds": [
               "day-6"
-            ]
+            ],
+            "nights": 1
           }
         ],
         "cars": [
           {
             "id": "car-yining",
             "model": null,
-            "pickupDate": "2027-01-05",
-            "returnDate": "2027-01-11",
+            "pickupDate": null,
+            "returnDate": null,
             "pickupTime": "航班落地后",
             "returnTime": null,
             "pickupLocation": "伊宁，具体门店待确认",
             "returnLocation": "伊宁，具体门店待确认",
-            "duration": null,
+            "duration": "D1—D7，实际租期待确认",
             "price": null,
             "status": "planned",
             "notes": "租期与费用按实际取还车时间确认。",
@@ -636,7 +643,7 @@ const travelData = {
         {
           "id": "book-return",
           "title": "落实伊宁回北京航班",
-          "description": "计划1月11日晚返京。",
+          "description": "计划D7晚从伊宁返回北京，日期和航班待确认。",
           "deadline": null,
           "deadlineLabel": "出发前",
           "priority": "high",
@@ -668,7 +675,7 @@ const travelData = {
         {
           "id": "confirm-starry-camp",
           "title": "确认星空营地住宿",
-          "description": "暂定1月6日晚住景区内。",
+          "description": "暂定D2晚住赛里木湖景区内，待确认是否开放及有房。",
           "deadline": null,
           "deadlineLabel": "出发前",
           "priority": "normal",
@@ -1026,33 +1033,76 @@ const travelData = {
       "trip": {
         "id": "japan",
         "title": "日本 · 东京—银山—北海道",
-        "dateLabel": "1月13日—26日 · 14天13晚",
-        "monthLabel": "01.13",
-        "description": "东京、银山温泉、函馆、洞爷湖、札幌、小樽、美瑛；流冰与热海早樱为机动选项。",
-        "order": 2,
-        "startDate": "2027-01-13",
-        "endDate": "2027-01-26",
+        "dateLabel": "暂定1月5日—18日 · 14天13晚",
+        "monthLabel": "01.05",
+        "description": "东京、银山温泉、函馆、洞爷湖、札幌、小樽、美瑛；1月17日东京机动。",
+        "order": 1,
+        "startDate": "2027-01-05",
+        "endDate": "2027-01-18",
         "timezone": "Asia/Tokyo",
-        "note": "日本行程使用当地时间，比北京时间快1小时。1月23—25日为机动窗口；流冰和热海早樱只在临近日期确认条件合适后启用。城市间优先JR／新干线，景区接驳优先Taxi／包车；2027年班次和冬季路况临行复核。",
+        "note": "日本行程暂定1月5日出发，按日本当地时间安排，比北京时间快1小时。1月15日札幌休整，16日飞东京；17日可视花情从东京往返热海。2027年交通班次及冬季路况临行复核。",
         "connectionNote": "",
         "overviewRoute": {
           "main": [
-            { "days": "出发", "place": "北京", "detail": "1月13日" },
-            { "days": "D1—D2", "place": "东京", "detail": "1月13—14日 · 住2晚" },
-            { "days": "D3", "place": "银山温泉", "detail": "1月15日 · 住1晚" },
-            { "days": "D4—D5", "place": "函馆", "detail": "1月16—17日 · 住2晚" },
-            { "days": "D6", "place": "洞爷湖温泉", "detail": "1月18日 · 住1晚" },
-            { "days": "D7—D11", "place": "札幌", "detail": "1月19—23日 · 默认住5晚" },
-            { "days": "D12—D13", "place": "东京", "detail": "1月24—25日 · 住2晚" },
-            { "days": "D14", "place": "北京", "detail": "1月26日返回" }
+            {
+              "days": "出发",
+              "place": "北京",
+              "detail": "暂定1月5日"
+            },
+            {
+              "days": "D1—D2",
+              "place": "东京",
+              "detail": "1月5—6日 · 住2晚"
+            },
+            {
+              "days": "D3",
+              "place": "银山温泉",
+              "detail": "1月7日 · 住1晚"
+            },
+            {
+              "days": "D4—D5",
+              "place": "函馆",
+              "detail": "1月8—9日 · 住2晚"
+            },
+            {
+              "days": "D6",
+              "place": "洞爷湖温泉",
+              "detail": "1月10日 · 住1晚"
+            },
+            {
+              "days": "D7—D11",
+              "place": "札幌",
+              "detail": "1月11—15日 · 住5晚"
+            },
+            {
+              "days": "D12—D13",
+              "place": "东京",
+              "detail": "1月16—17日 · 住2晚"
+            },
+            {
+              "days": "D14",
+              "place": "北京",
+              "detail": "1月18日返回"
+            }
           ],
           "excursions": [
-            { "days": "D9", "title": "小樽", "detail": "从札幌乘JR往返，当晚仍住札幌。" },
-            { "days": "D10", "title": "旭山动物园 → 美瑛", "detail": "从札幌包车往返，当晚回札幌。" }
+            {
+              "days": "D9",
+              "title": "小樽",
+              "detail": "从札幌乘JR往返，当晚仍住札幌。"
+            },
+            {
+              "days": "D10",
+              "title": "旭山动物园 → 美瑛",
+              "detail": "从札幌包车往返，当晚回札幌。"
+            }
           ],
           "options": [
-            { "days": "D11—D12", "title": "网走流冰", "detail": "仅在流冰与天气条件理想时启用；从札幌前往网走，D12飞东京。" },
-            { "days": "D13", "title": "热海早樱", "detail": "仅在花情理想时从东京往返热海，当晚住东京。" }
+            {
+              "days": "D13",
+              "title": "热海早樱",
+              "detail": "1月17日仍偏早，仅在花情理想时从东京往返；当晚住东京。"
+            }
           ]
         }
       },
@@ -1060,7 +1110,7 @@ const travelData = {
         {
           "id": "day-1",
           "day": 1,
-          "date": "2027-01-13",
+          "date": "2027-01-05",
           "title": "北京 — 东京",
           "description": "北京飞东京，抵达后进城入住。时间充足时游览浅草寺、浅草老街和隅田川。",
           "accommodation": {
@@ -1103,7 +1153,7 @@ const travelData = {
         {
           "id": "day-2",
           "day": 2,
-          "date": "2027-01-14",
+          "date": "2027-01-06",
           "title": "东京市内游览",
           "description": "07:30—08:30 明治神宫；约10:00—12:30 东京国立博物馆；下午谷中、根津。",
           "accommodation": {
@@ -1145,7 +1195,7 @@ const travelData = {
         {
           "id": "day-3",
           "day": 3,
-          "date": "2027-01-15",
+          "date": "2027-01-07",
           "title": "东京 — 银山温泉",
           "description": "东京经大石田前往银山温泉。下午入住，日落前后拍摄温泉街，晚上泡温泉。",
           "accommodation": {
@@ -1187,7 +1237,7 @@ const travelData = {
         {
           "id": "day-4",
           "day": 4,
-          "date": "2027-01-16",
+          "date": "2027-01-08",
           "title": "银山温泉 — 函馆",
           "description": "早餐后从银山温泉直接包车到仙台站，再乘东北／北海道新干线到新函馆北斗，换乘JR到函馆；发车与接驳按实际班次确认。",
           "accommodation": {
@@ -1240,7 +1290,7 @@ const travelData = {
         {
           "id": "day-5",
           "day": 5,
-          "date": "2027-01-17",
+          "date": "2027-01-09",
           "title": "函馆市内游览",
           "description": "函馆完整一天：上午五稜郭与函馆奉行所，下午元町、教堂群、八幡坂、旧函馆区公会堂，傍晚视天气登函馆山。",
           "accommodation": {
@@ -1302,7 +1352,7 @@ const travelData = {
         {
           "id": "day-6",
           "day": 6,
-          "date": "2027-01-18",
+          "date": "2027-01-10",
           "title": "函馆 — 洞爷湖",
           "description": "函馆直接包车到洞爷湖，下午按天气游览昭和新山、有珠山；日落前停止赶景点，留在湖畔欣赏洞爷湖与羊蹄山蓝调，住洞爷湖一晚。",
           "accommodation": {
@@ -1371,7 +1421,7 @@ const travelData = {
         {
           "id": "day-7",
           "day": 7,
-          "date": "2027-01-19",
+          "date": "2027-01-11",
           "title": "洞爷湖 — 札幌",
           "description": "上午在洞爷湖慢游，约10:30—11:00从酒店包车前往札幌；下午开始札幌市内行程。",
           "accommodation": {
@@ -1422,7 +1472,7 @@ const travelData = {
         {
           "id": "day-8",
           "day": 8,
-          "date": "2027-01-20",
+          "date": "2027-01-12",
           "title": "札幌市内游览",
           "description": "早晨北海道神宫，随后前往开拓村与北海道博物馆。时间不足时两馆选一，晚上回到市中心。",
           "accommodation": {
@@ -1476,7 +1526,7 @@ const travelData = {
         {
           "id": "day-9",
           "day": 9,
-          "date": "2027-01-21",
+          "date": "2027-01-13",
           "title": "小樽一日往返（住札幌）",
           "description": "从札幌乘JR到小樽，游览旧手宫线、色内旧建筑、运河与港口；傍晚视天气前往天狗山，晚上乘JR返回札幌。",
           "accommodation": {
@@ -1541,7 +1591,7 @@ const travelData = {
         {
           "id": "day-10",
           "day": 10,
-          "date": "2027-01-22",
+          "date": "2027-01-14",
           "title": "札幌出发 · 旭山动物园与美瑛",
           "description": "从札幌酒店包车出发，约10:30—13:00游旭山动物园；下午到美瑛看雪原、Christmas Tree、白须瀑布与白金青池点灯，夜间包车直返札幌。",
           "accommodation": {
@@ -1617,70 +1667,72 @@ const travelData = {
         {
           "id": "day-11",
           "day": 11,
-          "date": "2027-01-23",
-          "title": "机动窗口 · 札幌或网走",
-          "description": "默认留在札幌自由调整；只有临近日期确认网走流冰状况非常好时，才启用女满别／网走流冰分支，1月23日飞女满别并前往网走。",
+          "date": "2027-01-15",
+          "title": "札幌机动日",
+          "description": "留在札幌休整，按天气补看市内景点，为次日飞东京留余量。网走破冰船通常从1月20日运营，本次1月15—16日不安排流冰。",
           "accommodation": {
-            "area": "札幌（启用流冰分支时为网走）",
-            "bookingId": null
+            "area": "札幌",
+            "bookingId": "hotel-day-7"
           },
-          "transport": "默认札幌市内轨道交通／Taxi；启用分支时札幌→女满别航班＋Taxi／包车",
+          "transport": "札幌市内轨道交通／Taxi／步行",
           "distance": null,
           "duration": null,
           "timeline": [
             {
               "place": "札幌",
               "time": "白天",
-              "detail": "默认机动、休息或补看市内景点",
+              "detail": "休息、购物或补看市内景点",
               "leg": ""
             },
             {
-              "place": "女满别 / 网走",
-              "time": "仅流冰条件极好时",
-              "detail": "1月23日从札幌飞女满别，接驳至网走；订票前核对流冰与天气",
+              "place": "札幌",
+              "time": "晚上",
+              "detail": "住札幌，整理次日飞东京的行李",
               "leg": ""
             }
           ],
           "sights": [],
           "food": [],
           "reservations": [
-            "根据临近日期的流冰、天气与航班情况决定是否启用网走分支"
+            "确认次日新千岁至东京的航班与机场交通"
           ],
           "notes": [
-            "流冰不是固定行程；若不启用则继续住札幌"
+            "网走破冰船的现行运营期从1月20日开始，流冰分支不适用本次日期"
           ],
           "weatherClothing": [],
-          "bookingIds": []
+          "bookingIds": [
+            "hotel-day-7"
+          ]
         },
         {
           "id": "day-12",
           "day": 12,
-          "date": "2027-01-24",
-          "title": "机动窗口 · 札幌／网走 → 东京",
-          "description": "默认从札幌飞东京；若前一天启用网走流冰分支，1月24日看流冰后从女满别直接飞东京，不返回札幌。夜宿东京。",
+          "date": "2027-01-16",
+          "title": "札幌 — 东京",
+          "description": "从札幌前往新千岁机场，搭乘航班返回东京。抵达后入住东京，保留天气延误余量。",
           "accommodation": {
             "area": "东京",
             "bookingId": "hotel-day-13"
           },
-          "transport": "默认札幌→东京航班；流冰分支网走→女满别Taxi／包车、女满别→东京航班",
+          "transport": "JR／机场巴士、国内航班、东京市内交通",
           "distance": null,
           "duration": null,
           "timeline": [
             {
-              "place": "札幌 / 网走",
+              "place": "札幌",
               "time": "上午",
-              "detail": "默认札幌机动；网走分支按当天流冰和船只运营情况观测",
+              "detail": "退房并前往新千岁机场",
               "leg": ""
             },
             {
-              "place": "新千岁 / 女满别机场",
-              "time": "下午或傍晚",
-              "detail": "分别从札幌或网走出发，飞往东京",
+              "place": "新千岁机场",
+              "time": "班次待定",
+              "detail": "搭乘航班飞东京",
               "leg": ""
             },
             {
               "place": "东京",
-              "time": "晚上",
+              "time": "下午或晚上",
               "detail": "入住东京酒店",
               "leg": ""
             }
@@ -1688,22 +1740,24 @@ const travelData = {
           "sights": [],
           "food": [],
           "reservations": [
-            "临近日期决定札幌或女满别飞东京的衔接；确认航班与流冰船运营"
+            "预订新千岁至东京的国内航班",
+            "确认东京酒店入住"
           ],
           "notes": [
-            "网走流冰行程仅在临近日期条件非常好时启用；该分支不返回札幌"
+            "冬季航班可能延误，转场日不安排固定景点"
           ],
           "weatherClothing": [],
           "bookingIds": [
+            "flight-sapporo-tokyo",
             "hotel-day-13"
           ]
         },
         {
           "id": "day-13",
           "day": 13,
-          "date": "2027-01-25",
-          "title": "机动窗口 · 东京／热海早樱",
-          "description": "东京机动日；只有临近日期确认热海早樱花情很好，才安排东京—热海JR一日往返。无论是否启用热海，1月25日晚必须住东京。",
+          "date": "2027-01-17",
+          "title": "东京机动日／热海早樱视花情",
+          "description": "默认在东京自由游览。1月17日早于热海早樱通常的最佳观赏期，只有临近日期确认花情理想时才乘JR往返热海；当晚住东京。",
           "accommodation": {
             "area": "东京",
             "bookingId": "hotel-day-13"
@@ -1734,11 +1788,11 @@ const travelData = {
           "sights": [],
           "food": [],
           "reservations": [
-            "确认东京酒店覆盖1月24日和25日晚"
+            "确认东京酒店覆盖1月16日和17日晚"
           ],
           "notes": [
-            "热海早樱不是固定行程，只在临近日期花情很好时启用",
-            "1月25日晚无论如何住东京"
+            "热海早樱不保证在1月17日进入最佳观赏期",
+            "1月17日晚住东京"
           ],
           "weatherClothing": [],
           "bookingIds": [
@@ -1748,7 +1802,7 @@ const travelData = {
         {
           "id": "day-14",
           "day": 14,
-          "date": "2027-01-26",
+          "date": "2027-01-18",
           "title": "东京 — 北京",
           "description": "从东京机场飞北京，预留办理国际航班手续与东京市内去机场的时间；机场和班次待出票确认。",
           "accommodation": {
@@ -1787,7 +1841,7 @@ const travelData = {
           {
             "id": "flight-beijing-tokyo",
             "number": null,
-            "date": "2027-01-13",
+            "date": "2027-01-05",
             "airline": null,
             "departure": {
               "place": "北京",
@@ -1812,7 +1866,7 @@ const travelData = {
           {
             "id": "flight-tokyo-beijing",
             "number": null,
-            "date": "2027-01-26",
+            "date": "2027-01-18",
             "airline": null,
             "departure": {
               "place": "东京机场",
@@ -1829,9 +1883,34 @@ const travelData = {
             "checkInReminder": null,
             "price": null,
             "status": "planned",
-            "notes": "东京机场、班次及时间按实际出票确认；1月25日晚住东京。",
+            "notes": "东京机场、班次及时间按实际出票确认；1月17日晚住东京。",
             "dayIds": [
               "day-14"
+            ]
+          },
+          {
+            "id": "flight-sapporo-tokyo",
+            "number": null,
+            "date": "2027-01-16",
+            "airline": null,
+            "departure": {
+              "place": "新千岁机场",
+              "time": null,
+              "terminal": null
+            },
+            "arrival": {
+              "place": "东京机场",
+              "time": null,
+              "terminal": null
+            },
+            "duration": null,
+            "baggage": null,
+            "checkInReminder": null,
+            "price": null,
+            "status": "planned",
+            "notes": "D12转场航班待预订；冬季天气可能导致延误。",
+            "dayIds": [
+              "day-12"
             ]
           }
         ],
@@ -1841,8 +1920,8 @@ const travelData = {
             "id": "hotel-day-1",
             "name": null,
             "city": "东京",
-            "checkInDate": "2027-01-13",
-            "checkOutDate": "2027-01-15",
+            "checkInDate": "2027-01-05",
+            "checkOutDate": "2027-01-07",
             "address": null,
             "checkInTime": null,
             "checkOutTime": null,
@@ -1858,8 +1937,8 @@ const travelData = {
             "id": "hotel-day-3",
             "name": null,
             "city": "银山温泉旅馆",
-            "checkInDate": "2027-01-15",
-            "checkOutDate": "2027-01-16",
+            "checkInDate": "2027-01-07",
+            "checkOutDate": "2027-01-08",
             "address": null,
             "checkInTime": null,
             "checkOutTime": null,
@@ -1874,8 +1953,8 @@ const travelData = {
             "id": "hotel-day-4",
             "name": null,
             "city": "函馆",
-            "checkInDate": "2027-01-16",
-            "checkOutDate": "2027-01-18",
+            "checkInDate": "2027-01-08",
+            "checkOutDate": "2027-01-10",
             "address": null,
             "checkInTime": null,
             "checkOutTime": null,
@@ -1891,8 +1970,8 @@ const travelData = {
             "id": "hotel-day-6",
             "name": null,
             "city": "洞爷湖温泉",
-            "checkInDate": "2027-01-18",
-            "checkOutDate": "2027-01-19",
+            "checkInDate": "2027-01-10",
+            "checkOutDate": "2027-01-11",
             "address": null,
             "checkInTime": null,
             "checkOutTime": null,
@@ -1907,14 +1986,14 @@ const travelData = {
             "id": "hotel-day-7",
             "name": null,
             "city": "札幌",
-            "checkInDate": "2027-01-19",
-            "checkOutDate": "2027-01-24",
+            "checkInDate": "2027-01-11",
+            "checkOutDate": "2027-01-16",
             "address": null,
             "checkInTime": null,
             "checkOutTime": null,
             "price": null,
             "status": "planned",
-            "notes": "札幌为1月19—23日晚的默认住宿；1月23日仅在流冰条件极好时改住网走。",
+            "notes": "札幌住1月11—15日五晚；小樽与旭山动物园／美瑛均为当天往返。",
             "dayIds": [
               "day-7",
               "day-8",
@@ -1927,14 +2006,14 @@ const travelData = {
             "id": "hotel-day-13",
             "name": null,
             "city": "东京",
-            "checkInDate": "2027-01-24",
-            "checkOutDate": "2027-01-26",
+            "checkInDate": "2027-01-16",
+            "checkOutDate": "2027-01-18",
             "address": null,
             "checkInTime": null,
             "checkOutTime": null,
             "price": null,
             "status": "planned",
-            "notes": "东京住1月24日、25日两晚；1月25日晚必须在东京。",
+            "notes": "东京住1月16日、17日两晚；1月17日晚必须在东京。",
             "dayIds": [
               "day-12",
               "day-13"
@@ -2038,8 +2117,8 @@ const travelData = {
         },
         {
           "id": "international-flights",
-          "title": "落实往返国际航班",
-          "description": "北京至东京、东京至北京；1月24日根据流冰分支衔接札幌或女满别飞东京。",
+          "title": "落实日本段航班",
+          "description": "北京至东京、东京至北京，以及1月16日新千岁至东京的国内航班。",
           "deadline": null,
           "deadlineLabel": "出发前",
           "priority": "high",
@@ -2049,7 +2128,7 @@ const travelData = {
         {
           "id": "ginzan-transfer",
           "title": "确认银山旅馆接送",
-          "description": "1月15日确认旅馆接送；1月16日安排银山温泉直接包车到仙台站。",
+          "description": "1月7日确认旅馆接送；1月8日安排银山温泉至仙台站的包车。",
           "deadline": null,
           "deadlineLabel": "出发前",
           "priority": "high",
@@ -2072,7 +2151,7 @@ const travelData = {
         {
           "id": "biei-transport",
           "title": "预订札幌往返旭川与美瑛包车",
-          "description": "1月22日札幌酒店往返：旭山动物园、雪原、Christmas Tree、白须瀑布、白金青池点灯；确认夜间返程。",
+          "description": "1月14日札幌酒店往返：旭山动物园、美瑛雪原、Christmas Tree、白须瀑布、白金青池点灯；确认夜间返程。",
           "deadline": null,
           "deadlineLabel": "出发前",
           "priority": "high",
@@ -2084,7 +2163,7 @@ const travelData = {
         {
           "id": "toya-stay",
           "title": "预订洞爷湖温泉住宿",
-          "description": "确认1月18日湖景、晚餐时间及函馆至洞爷湖的包车。",
+          "description": "确认1月10日湖景、晚餐时间及函馆至洞爷湖的包车。",
           "deadline": null,
           "deadlineLabel": "出发前",
           "priority": "high",
@@ -2095,8 +2174,8 @@ const travelData = {
         },
         {
           "id": "flexible-days",
-          "title": "确认机动窗口",
-          "description": "临近日期根据网走流冰和热海早樱花情决定分支；1月24日抵东京，25日晚必须住东京。",
+          "title": "确认东京机动日与热海花情",
+          "description": "1月15日札幌休整，16日飞东京；17日以东京为主，花情理想才往返热海。",
           "deadline": null,
           "deadlineLabel": "出发前",
           "priority": "high",
@@ -2438,26 +2517,26 @@ const travelData = {
           "id": "winter-route",
           "icon": "🚐",
           "title": "美瑛冬季包车",
-          "content": "1月22日从札幌酒店包车往返旭山动物园、美瑛雪原、Christmas Tree、白须瀑布与白金青池点灯；车程长，保留天气与夜间回程余量。Christmas Tree周边为私人农田，禁止进入雪地和路边停车。"
+          "content": "1月14日从札幌酒店包车往返旭山动物园、美瑛雪原、Christmas Tree、白须瀑布与白金青池点灯；车程长，保留天气与夜间回程余量。Christmas Tree周边为私人农田，禁止进入雪地和路边停车。"
         }
       ],
       "practicalNotes": [
         {
           "title": "交通与住宿",
           "items": [
-            "1月15日银山温泉住一晚，16日从旅馆直接包车到仙台，再乘东北／北海道新干线至新函馆北斗并换乘JR到函馆。",
-            "1月18日函馆包车直达洞爷湖，19日上午慢游后约10:30—11:00包车去札幌。",
-            "1月21日小樽当天往返札幌；22日札幌酒店包车往返旭山动物园与美瑛；1月23日默认住札幌，24日和25日晚住东京。",
-            "城市间优先JR／新干线；短距离景区接驳优先Taxi／包车，交通班次与冰雪路况临行复核。"
+            "1月7日银山温泉住一晚，8日从旅馆包车到仙台，再乘东北／北海道新干线至新函馆北斗并换乘JR到函馆。",
+            "1月10日函馆包车至洞爷湖，11日上午慢游后约10:30—11:00包车去札幌。",
+            "1月13日小樽当天往返札幌；14日包车往返旭山动物园与美瑛；15日晚住札幌，16日和17日晚住东京。",
+            "城市间交通班次、景区接驳与冰雪路况在临行前复核。"
           ]
         },
         {
-          "title": "机动窗口与天气",
+          "title": "机动日与天气",
           "items": [
-            "1月23—25日机动：仅临近日期确认流冰状况非常好时，23日飞女满别／网走，24日看流冰后女满别直飞东京。",
-            "只有临近日期热海早樱花情很好时，才从东京于1月25日往返热海；当晚必须住东京。",
-            "1月18日昭和新山、有珠山视运营和天气游览，日落前停止赶景点，留给洞爷湖与羊蹄山蓝调。",
-            "函馆山与天狗山缆车受风雪影响；白金青池点灯时间与冬季道路通行临行核对。"
+            "1月15日保留札幌机动日。网走破冰船的现行运营期从1月20日开始，故不安排原流冰分支。",
+            "1月17日热海早樱仅视实际花情安排，往返后当晚住东京；通常的最佳观赏期在1月下旬至2月上旬。",
+            "1月10日昭和新山、有珠山视天气与运营情况游览，日落前留时间给洞爷湖。",
+            "函馆山、天狗山缆车及白金青池点灯，按当季运营与天气核对。"
           ]
         }
       ],
@@ -2516,6 +2595,16 @@ const travelData = {
           "美瑛观光协会：圣诞树",
           "https://www.biei-hokkaido.jp/en/facility/christmas-tree",
           "冬季应使用出租车或观光巴士，禁止进入私人农田与路边停车。"
+        ],
+        [
+          "网走流冰观光破冰船：运营期",
+          "https://ms-aurora.com/abashiri/prices/",
+          "现行运营期为1月20日至3月31日。"
+        ],
+        [
+          "热海市观光协会：早樱常见花期",
+          "https://www.ataminews.gr.jp/faqs",
+          "通常在1月下旬至2月上旬进入最佳观赏期，随当年花情变化。"
         ]
       ]
     },
