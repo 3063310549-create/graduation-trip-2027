@@ -83,7 +83,7 @@
     const stops = routeStops();
     const overviewRoute = record.trip.overviewRoute;
     const routeMarkup = overviewRoute?.main?.length ? html`
-      <p class="route-caption">跨城转场与留宿地点；当天往返和机动选项列在下方。</p>
+      <p class="route-caption">跨城转场与留宿地点；札幌出发的当天往返安排列在下方。</p>
       <ol class="route-mainline">${overviewRoute.main.map((stop) => html`
         <li><span class="route-day">${escapeHtml(stop.days)}</span><div class="route-place"><strong>${escapeHtml(stop.place)}</strong><small>${escapeHtml(stop.detail)}</small></div></li>
       `).join("")}</ol>
