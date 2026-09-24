@@ -81,13 +81,22 @@
 
   function renderOverview() {
     const stops = routeStops();
+    const overviewRoute = record.trip.overviewRoute;
+    const routeMarkup = overviewRoute?.main?.length ? html`
+      <p class="route-caption">跨城转场与留宿地点；当天往返和机动选项列在下方。</p>
+      <ol class="route-mainline">${overviewRoute.main.map((stop) => html`
+        <li><span class="route-day">${escapeHtml(stop.days)}</span><div class="route-place"><strong>${escapeHtml(stop.place)}</strong><small>${escapeHtml(stop.detail)}</small></div></li>
+      `).join("")}</ol>
+      ${overviewRoute.excursions?.length ? `<div class="route-aside"><h4>札幌出发 · 当天往返</h4><div class="route-aside-grid">${overviewRoute.excursions.map((item) => html`<div class="route-aside-item"><span>${escapeHtml(item.days)}</span><strong>${escapeHtml(item.title)}</strong><p>${escapeHtml(item.detail)}</p></div>`).join("")}</div></div>` : ""}
+      ${overviewRoute.options?.length ? `<div class="route-aside route-options"><h4>看条件再决定</h4><div class="route-aside-grid">${overviewRoute.options.map((item) => html`<div class="route-aside-item"><span>${escapeHtml(item.days)}</span><strong>${escapeHtml(item.title)}</strong><p>${escapeHtml(item.detail)}</p></div>`).join("")}</div></div>` : ""}
+    ` : (stops.length ? `<ol class="route-chain">${stops.map((stop) => `<li>${escapeHtml(stop)}</li>`).join("")}</ol>` : `<p class="empty-copy">路线和停靠点待确认。</p>`);
     const plannedCount = allBookings.filter((item) => item.status === "planned" || item.status === "pending").length;
     return html`
       <section class="tab-panel is-active" data-panel="overview" aria-labelledby="tab-overview">
         <div class="section-heading"><p class="eyebrow">行程总览</p><h2>${escapeHtml(record.trip.title)}</h2></div>
         <article class="paper-card route-card">
-          <h3>路线</h3>
-          ${stops.length ? `<ol class="route-chain">${stops.map((stop) => `<li>${escapeHtml(stop)}</li>`).join("")}</ol>` : `<p class="empty-copy">路线和停靠点待确认。</p>`}
+          <h3>${overviewRoute ? "住宿主线" : "路线"}</h3>
+          ${routeMarkup}
         </article>
         <div class="summary-grid">
           <article class="mini-card"><span>行程</span><strong>${record.itinerary.length ? `${record.itinerary.length} 天` : "待确认"}</strong></article>
