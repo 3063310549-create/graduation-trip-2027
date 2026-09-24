@@ -1028,18 +1028,14 @@ const travelData = {
         "title": "日本 · 东京—银山—北海道",
         "dateLabel": "1月13日—26日 · 14天13晚",
         "monthLabel": "01.13",
-        "description": "东京、银山温泉、函馆、洞爷湖、札幌、小樽、旭川、美瑛、富良野。",
+        "description": "东京、银山温泉、函馆、洞爷湖、札幌、小樽、美瑛；流冰与热海早樱为机动选项。",
         "order": 2,
         "startDate": "2027-01-13",
         "endDate": "2027-01-26",
         "timezone": "Asia/Tokyo",
-        "note": "日本行程使用当地时间，比北京时间快1小时。洞爷湖安排在函馆与札幌之间留宿；列车、巴士和包车时间按2027年冬季班次复核。",
+        "note": "日本行程使用当地时间，比北京时间快1小时。1月23—25日为机动窗口；流冰和热海早樱只在临近日期确认条件合适后启用。城市间优先JR／新干线，景区接驳优先Taxi／包车；2027年班次和冬季路况临行复核。",
         "connectionNote": "",
         "overviewRefs": [
-          [
-            1,
-            0
-          ],
           [
             1,
             1
@@ -1050,11 +1046,23 @@ const travelData = {
           ],
           [
             4,
+            3
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            5,
             4
           ],
           [
             6,
-            2
+            3
+          ],
+          [
+            6,
+            4
           ],
           [
             7,
@@ -1069,24 +1077,12 @@ const travelData = {
             2
           ],
           [
-            11,
-            1
-          ],
-          [
             12,
-            1
-          ],
-          [
-            12,
-            4
+            2
           ],
           [
             13,
             2
-          ],
-          [
-            14,
-            1
           ]
         ]
       },
@@ -1186,7 +1182,7 @@ const travelData = {
             "area": "银山温泉旅馆",
             "bookingId": "hotel-day-3"
           },
-          "transport": "铁路及接驳；旅馆接送待确认",
+          "transport": "山形新干线／JR至大石田，旅馆接送或Taxi",
           "distance": null,
           "duration": null,
           "timeline": [
@@ -1223,50 +1219,49 @@ const travelData = {
           "day": 4,
           "date": "2027-01-16",
           "title": "银山温泉 — 函馆",
-          "description": "早餐后退房，全天转场至函馆。经仙台或福岛连接东北新干线，到新函馆北斗后换乘至函馆。",
+          "description": "早餐后从银山温泉直接包车到仙台站，再乘东北／北海道新干线到新函馆北斗，换乘JR到函馆；发车与接驳按实际班次确认。",
           "accommodation": {
             "area": "函馆",
             "bookingId": "hotel-day-4"
           },
-          "transport": "接驳、铁路、新干线、市区连接；班次待定",
+          "transport": "银山温泉→仙台包车；东北／北海道新干线、JR",
           "distance": null,
           "duration": null,
           "timeline": [
             {
               "place": "银山温泉",
-              "time": "",
-              "detail": "",
-              "leg": ""
+              "time": "早餐后",
+              "detail": "退房，包车直达仙台站",
+              "leg": "冬季车程按路况预留余量"
             },
             {
-              "place": "大石田",
-              "time": "",
-              "detail": "",
-              "leg": ""
-            },
-            {
-              "place": "仙台或福岛转乘",
-              "time": "",
-              "detail": "",
+              "place": "仙台站",
+              "time": "待定",
+              "detail": "换乘东北／北海道新干线",
               "leg": ""
             },
             {
               "place": "新函馆北斗",
-              "time": "",
-              "detail": "",
+              "time": "待定",
+              "detail": "换乘JR到函馆",
               "leg": ""
             },
             {
               "place": "函馆",
-              "time": "",
-              "detail": "",
+              "time": "晚间",
+              "detail": "入住休息",
               "leg": ""
             }
           ],
           "sights": [],
           "food": [],
-          "reservations": [],
-          "notes": [],
+          "reservations": [
+            "提前确认银山温泉至仙台包车及新干线衔接",
+            "新干线指定席和新函馆北斗至函馆的JR"
+          ],
+          "notes": [
+            "冰雪路况和仙台站转车时间应留足余量"
+          ],
           "weatherClothing": [],
           "bookingIds": [
             "hotel-day-4"
@@ -1277,7 +1272,7 @@ const travelData = {
           "day": 5,
           "date": "2027-01-17",
           "title": "函馆市内游览",
-          "description": "上午元町、教堂群、八幡坂；下午港口旧建筑；傍晚上函馆山。天气不适合时留在港区。",
+          "description": "函馆完整一天：上午五稜郭与函馆奉行所，下午元町、教堂群、八幡坂、旧函馆区公会堂，傍晚视天气登函馆山。",
           "accommodation": {
             "area": "函馆",
             "bookingId": "hotel-day-4"
@@ -1287,31 +1282,45 @@ const travelData = {
           "duration": null,
           "timeline": [
             {
+              "place": "五稜郭 / 函馆奉行所",
+              "time": "上午",
+              "detail": "游览城郭与奉行所，开放时间临行复核",
+              "leg": ""
+            },
+            {
               "place": "元町 / 教堂群",
-              "time": "",
-              "detail": "",
+              "time": "下午",
+              "detail": "历史街区步行",
               "leg": ""
             },
             {
               "place": "八幡坂",
-              "time": "",
-              "detail": "",
+              "time": "下午",
+              "detail": "沿坡道拍照",
               "leg": ""
             },
             {
-              "place": "港口",
-              "time": "",
-              "detail": "",
+              "place": "旧函馆区公会堂",
+              "time": "下午",
+              "detail": "留意闭馆时间",
               "leg": ""
             },
             {
               "place": "函馆山",
-              "time": "",
-              "detail": "",
+              "time": "傍晚",
+              "detail": "按天气与缆车运营决定上山",
               "leg": ""
             }
           ],
-          "sights": [],
+          "sights": [
+            "五稜郭",
+            "函馆奉行所",
+            "元町",
+            "教堂群",
+            "八幡坂",
+            "旧函馆区公会堂",
+            "函馆山"
+          ],
           "food": [],
           "reservations": [],
           "notes": [],
@@ -1325,61 +1334,67 @@ const travelData = {
           "day": 6,
           "date": "2027-01-18",
           "title": "函馆 — 洞爷湖",
-          "description": "上午游览五稜郭与函馆奉行所，午后乘特急北斗在洞爷站下车，再乘巴士或出租车前往洞爷湖温泉。傍晚沿湖散步，入住湖畔温泉酒店。",
+          "description": "函馆直接包车到洞爷湖，下午按天气游览昭和新山、有珠山；日落前停止赶景点，留在湖畔欣赏洞爷湖与羊蹄山蓝调，住洞爷湖一晚。",
           "accommodation": {
             "area": "洞爷湖温泉",
             "bookingId": "hotel-day-6"
           },
-          "transport": "市内交通、JR特急北斗、道南巴士或出租车",
+          "transport": "函馆至洞爷湖包车，景区接驳包车／Taxi",
           "distance": null,
-          "duration": "函馆至洞爷站约2小时；车站至温泉区约20分钟，按2027班次复核",
+          "duration": "车程与山地开放情况按冬季路况复核",
           "timeline": [
             {
-              "place": "五稜郭 / 函馆奉行所",
+              "place": "函馆",
               "time": "上午",
-              "detail": "退房后游览，行李寄存在函馆站",
+              "detail": "退房后包车出发",
               "leg": ""
             },
             {
-              "bookingId": "train-hokuto",
-              "endpoint": "departure",
-              "detail": "乘特急北斗前往洞爷",
-              "showDuration": true
+              "place": "昭和新山",
+              "time": "下午",
+              "detail": "按道路与现场运营安排停留",
+              "leg": ""
             },
             {
-              "bookingId": "train-hokuto",
-              "endpoint": "arrival",
-              "detail": "换乘巴士或出租车",
-              "leg": "约20分钟"
+              "place": "有珠山",
+              "time": "下午",
+              "detail": "缆车与观景视天气及运营情况",
+              "leg": ""
+            },
+            {
+              "place": "洞爷湖 / 羊蹄山",
+              "time": "日落前至蓝调",
+              "detail": "停止赶景点，湖畔观景；羊蹄山可见度取决于天气",
+              "leg": ""
             },
             {
               "place": "洞爷湖温泉",
-              "time": "傍晚",
-              "detail": "湖畔散步、入住温泉酒店",
+              "time": "晚上",
+              "detail": "入住湖畔温泉酒店",
               "leg": ""
             }
           ],
           "sights": [
-            "五稜郭",
-            "洞爷湖湖畔"
+            "昭和新山",
+            "有珠山",
+            "洞爷湖",
+            "羊蹄山远眺"
           ],
           "food": [
-            "前往车站前准备午餐或便当"
+            "提前确认洞爷湖酒店晚餐时间"
           ],
           "reservations": [
-            "特急北斗指定席",
-            "洞爷湖温泉酒店",
-            "确认洞爷站至温泉区接驳"
+            "函馆至洞爷湖全天包车及景区接驳",
+            "洞爷湖温泉酒店；确认晚餐时间"
           ],
           "notes": [
-            "大件行李建议提前寄往札幌或酒店",
-            "冬季风雪可能影响铁路和巴士"
+            "日落前结束跨景点移动，蓝调时段留给湖畔",
+            "有珠山缆车与羊蹄山能见度受冬季天气影响"
           ],
           "weatherClothing": [
             "湖畔风大，准备防风外层和防滑鞋"
           ],
           "bookingIds": [
-            "train-hokuto",
             "hotel-day-6"
           ]
         },
@@ -1388,50 +1403,49 @@ const travelData = {
           "day": 7,
           "date": "2027-01-19",
           "title": "洞爷湖 — 札幌",
-          "description": "上午留给洞爷湖。天气好时搭乘冬季观光巴士或游船，天气一般则沿湖散步、泡温泉。午后前往札幌，傍晚入住。",
+          "description": "上午在洞爷湖慢游，约10:30—11:00从酒店包车前往札幌；下午开始札幌市内行程。",
           "accommodation": {
             "area": "札幌",
             "bookingId": "hotel-day-7"
           },
-          "transport": "冬季观光巴士或步行；巴士接驳、JR特急北斗",
+          "transport": "洞爷湖→札幌包车；札幌市内地铁／Taxi／步行",
           "distance": null,
-          "duration": "洞爷湖温泉至札幌约2.5—3小时，含接驳",
+          "duration": "包车时间按天气与道路情况确认",
           "timeline": [
             {
               "place": "洞爷湖湖畔",
               "time": "上午",
-              "detail": "冬季观光巴士、游船或湖边慢游，按天气选择",
+              "detail": "慢游、看湖景、早餐",
               "leg": ""
             },
             {
               "place": "洞爷湖温泉",
-              "time": "午后",
-              "detail": "退房后前往洞爷站",
-              "leg": "巴士或出租车约20分钟"
+              "time": "约10:30—11:00",
+              "detail": "从酒店包车出发",
+              "leg": ""
             },
             {
-              "bookingId": "train-toya-sapporo",
-              "endpoint": "arrival",
-              "detail": "抵达后入住",
+              "place": "札幌",
+              "time": "下午",
+              "detail": "入住后开始市内游览",
               "leg": ""
             }
           ],
           "sights": [
-            "洞爷湖湖畔"
+            "洞爷湖湖畔",
+            "札幌市中心"
           ],
           "food": [],
           "reservations": [
-            "确认冬季观光巴士或游船运营",
-            "预订洞爷至札幌的特急指定席"
+            "预订洞爷湖酒店至札幌的包车"
           ],
           "notes": [
-            "冬季巴士活动以当季公告为准，恶劣天气时只保留湖畔散步和温泉"
+            "冬季公路通行情况临行复核，下午行程保持弹性"
           ],
           "weatherClothing": [
             "湖边停留时注意防风保暖"
           ],
           "bookingIds": [
-            "train-toya-sapporo",
             "hotel-day-7"
           ]
         },
@@ -1445,7 +1459,7 @@ const travelData = {
             "area": "札幌",
             "bookingId": "hotel-day-7"
           },
-          "transport": "市内轨道交通、巴士、步行",
+          "transport": "市内轨道交通、Taxi、步行",
           "distance": null,
           "duration": null,
           "timeline": [
@@ -1493,38 +1507,44 @@ const travelData = {
           "id": "day-9",
           "day": 9,
           "date": "2027-01-21",
-          "title": "札幌 — 小樽",
-          "description": "上午乘JR前往小樽，寄存行李后游览旧手宫线、色内旧建筑、运河与港口。傍晚视天气前往天狗山，住小樽一晚。",
+          "title": "小樽一日往返（住札幌）",
+          "description": "从札幌乘JR到小樽，游览旧手宫线、色内旧建筑、运河与港口；傍晚视天气前往天狗山，晚上乘JR返回札幌。",
           "accommodation": {
-            "area": "小樽",
-            "bookingId": "hotel-day-9"
+            "area": "札幌",
+            "bookingId": "hotel-day-7"
           },
-          "transport": "JR、市内交通、步行；天狗山缆车视运营",
+          "transport": "札幌⇄小樽JR；市内步行／Taxi；天狗山缆车视运营",
           "distance": null,
-          "duration": "札幌至小樽约40分钟",
+          "duration": "札幌至小樽单程约40分钟，班次临行复核",
           "timeline": [
             {
               "place": "札幌",
               "time": "上午",
-              "detail": "乘JR出发",
-              "leg": "约40分钟"
+              "detail": "乘JR出发，不更换酒店",
+              "leg": ""
             },
             {
               "place": "小樽 · 旧手宫线 / 色内",
               "time": "中午前后",
-              "detail": "",
+              "detail": "历史街区步行",
               "leg": ""
             },
             {
               "place": "小樽运河 / 港口",
               "time": "下午",
-              "detail": "",
+              "detail": "运河与港口",
               "leg": ""
             },
             {
               "place": "天狗山",
               "time": "傍晚",
-              "detail": "缆车停运时留在运河",
+              "detail": "天气或缆车不合适时留在运河",
+              "leg": ""
+            },
+            {
+              "place": "札幌",
+              "time": "晚上",
+              "detail": "乘JR返回札幌住宿",
               "leg": ""
             }
           ],
@@ -1539,229 +1559,219 @@ const travelData = {
           ],
           "reservations": [],
           "notes": [
-            "小樽压缩为一晚，重点保留运河、旧建筑和雪夜"
+            "小樽为一日往返，行李留在札幌酒店"
           ],
           "weatherClothing": [
             "坡道和结冰路面需要防滑鞋"
           ],
           "bookingIds": [
-            "hotel-day-9"
+            "hotel-day-7"
           ]
         },
         {
           "id": "day-10",
           "day": 10,
           "date": "2027-01-22",
-          "title": "小樽 — 旭川",
-          "description": "上午补看小樽坡道或车站周边，午后经札幌前往旭川。入住后休息，为次日动物园和后一天包车行程做准备。",
+          "title": "札幌出发 · 旭山动物园与美瑛",
+          "description": "从札幌酒店包车出发，约10:30—13:00游旭山动物园；下午到美瑛看雪原、Christmas Tree、白须瀑布与白金青池点灯，夜间包车直返札幌。",
           "accommodation": {
-            "area": "旭川",
-            "bookingId": "hotel-day-10"
+            "area": "札幌",
+            "bookingId": "hotel-day-7"
           },
-          "transport": "JR，经札幌换乘特急列车",
+          "transport": "札幌酒店往返全天包车；景点之间同车接驳",
           "distance": null,
-          "duration": "约2.5—3小时，按换乘确定",
+          "duration": "全天长距离包车；返回札幌较晚，须留足冰雪路况余量",
           "timeline": [
             {
-              "place": "小樽坡道 / 车站周边",
-              "time": "上午",
-              "detail": "补拍后取行李",
+              "place": "札幌酒店",
+              "time": "清晨",
+              "detail": "包车出发，按冬季路况倒推发车时间",
               "leg": ""
             },
             {
-              "bookingId": "train-otaru-asahikawa",
-              "endpoint": "departure",
-              "detail": "经札幌换乘前往旭川",
-              "showDuration": true
+              "place": "旭山动物园",
+              "time": "约10:30—13:00",
+              "detail": "游览与午餐；开放和活动时间临行核对",
+              "leg": ""
             },
             {
-              "bookingId": "train-otaru-asahikawa",
-              "endpoint": "arrival",
-              "detail": "入住、补给",
+              "place": "美瑛雪原 / Christmas Tree",
+              "time": "下午",
+              "detail": "仅在允许停车位置观景，不进入私人农田",
+              "leg": ""
+            },
+            {
+              "place": "白须瀑布",
+              "time": "下午",
+              "detail": "视道路与剩余日照停留",
+              "leg": ""
+            },
+            {
+              "place": "白金青池",
+              "time": "点灯时段",
+              "detail": "确认当季点灯时间后观赏",
+              "leg": ""
+            },
+            {
+              "place": "札幌酒店",
+              "time": "夜间",
+              "detail": "同车直返，不在旭川住宿",
               "leg": ""
             }
           ],
           "sights": [
-            "小樽坡道"
+            "旭山动物园",
+            "美瑛雪原",
+            "Christmas Tree",
+            "白须瀑布",
+            "白金青池点灯"
           ],
-          "food": [],
+          "food": [
+            "动物园或车上准备简餐"
+          ],
           "reservations": [
-            "预订札幌至旭川特急指定席"
+            "预订札幌酒店往返旭川、美瑛与白金的冬季全天包车",
+            "临行确认动物园开放及青池点灯时间"
           ],
           "notes": [
-            "避免把旭山动物园塞进转场日下午，冬季闭园早"
+            "这一天车程很长，若风雪、交通或点灯安排受影响，应缩减停留点而非压缩安全余量",
+            "Christmas Tree周围是私人农田，禁止进入雪地和路边停车"
           ],
-          "weatherClothing": [],
+          "weatherClothing": [
+            "长时间在户外，准备保暖层、手套和防滑鞋"
+          ],
           "bookingIds": [
-            "train-otaru-asahikawa",
-            "hotel-day-10"
+            "hotel-day-7"
           ]
         },
         {
           "id": "day-11",
           "day": 11,
           "date": "2027-01-23",
-          "title": "旭山动物园",
-          "description": "安排完整的动物园日。2027年冬季已公布开放时间为10:30—15:30，建议开园前抵达；企鹅散步等活动以当天公告为准。",
+          "title": "机动窗口 · 札幌或网走",
+          "description": "默认留在札幌自由调整；只有临近日期确认网走流冰状况非常好时，才启用女满别／网走流冰分支，1月23日飞女满别并前往网走。",
           "accommodation": {
-            "area": "旭川",
-            "bookingId": "hotel-day-10"
+            "area": "札幌（启用流冰分支时为网走）",
+            "bookingId": null
           },
-          "transport": "旭川站往返动物园巴士",
+          "transport": "默认札幌市内轨道交通／Taxi；启用分支时札幌→女满别航班＋Taxi／包车",
           "distance": null,
-          "duration": "园内约5小时，另计往返巴士",
+          "duration": null,
           "timeline": [
             {
-              "place": "旭川站",
-              "time": "上午",
-              "detail": "提前乘巴士前往动物园",
+              "place": "札幌",
+              "time": "白天",
+              "detail": "默认机动、休息或补看市内景点",
               "leg": ""
             },
             {
-              "place": "旭山动物园",
-              "time": "10:30—15:30",
-              "detail": "冬季动物展示；企鹅散步按当天公告",
-              "leg": ""
-            },
-            {
-              "place": "旭川市区",
-              "time": "傍晚",
-              "detail": "返回、休息",
-              "leg": ""
-            }
-          ],
-          "sights": [
-            "旭山动物园"
-          ],
-          "food": [
-            "园内用餐或自备简餐"
-          ],
-          "reservations": [
-            "临行核对动物园活动日程和往返巴士"
-          ],
-          "notes": [
-            "最后入园时间为15:00；不要安排在转场日下午"
-          ],
-          "weatherClothing": [
-            "长时间在户外，准备保暖层、手套和防滑鞋"
-          ],
-          "bookingIds": [
-            "hotel-day-10"
-          ]
-        },
-        {
-          "id": "day-12",
-          "day": 12,
-          "date": "2027-01-24",
-          "title": "美瑛雪原 — 白金青池 — 森林精灵露台",
-          "description": "包车完成旭川、美瑛、白金和富良野的单向串联：白天拍摄孤独的圣诞树，傍晚看白金青池冬季点灯，最后前往森林精灵露台，住富良野。",
-          "accommodation": {
-            "area": "富良野",
-            "bookingId": "hotel-day-12"
-          },
-          "transport": "冬季包车或带司机车辆；不建议自行驾车",
-          "distance": null,
-          "duration": "建议包车约10小时",
-          "timeline": [
-            {
-              "place": "旭川",
-              "time": "约09:30",
-              "detail": "退房后包车出发",
-              "leg": ""
-            },
-            {
-              "place": "美瑛 · 孤独的圣诞树",
-              "time": "上午",
-              "detail": "仅在道路安全位置拍摄",
-              "leg": ""
-            },
-            {
-              "place": "美瑛 / 白金区域",
-              "time": "下午",
-              "detail": "根据天气调整停留时间",
-              "leg": ""
-            },
-            {
-              "place": "白金青池",
-              "time": "约17:00",
-              "detail": "观看冬季点灯；1月通常17:00开始",
-              "leg": ""
-            },
-            {
-              "place": "富良野 · 森林精灵露台",
-              "time": "约18:30—20:00",
-              "detail": "夜间亮灯，结束后入住富良野",
-              "leg": ""
-            }
-          ],
-          "sights": [
-            "孤独的圣诞树",
-            "白金青池冬季点灯",
-            "森林精灵露台"
-          ],
-          "food": [
-            "准备车上简餐，晚餐确认酒店或富良野市区"
-          ],
-          "reservations": [
-            "预订可覆盖旭川出发、富良野结束的冬季包车",
-            "确认森林精灵露台店铺营业情况"
-          ],
-          "notes": [
-            "圣诞树周边是私人农田，禁止进入雪地、禁止路边停车",
-            "冬季青池通常结冰覆雪，重点是夜间灯光而非蓝色水面",
-            "森林精灵露台当前冬季营业至20:45，2027年需再次确认"
-          ],
-          "weatherClothing": [
-            "全天低温并有夜间户外停留，准备暖宝宝和备用手套"
-          ],
-          "bookingIds": [
-            "hotel-day-12"
-          ]
-        },
-        {
-          "id": "day-13",
-          "day": 13,
-          "date": "2027-01-25",
-          "title": "富良野 — 札幌 / 新千岁",
-          "description": "上午留出休息和整理行李时间，中午前后从富良野出发，经泷川转乘JR前往札幌或新千岁机场附近。最后一晚以返程稳定为优先。",
-          "accommodation": {
-            "area": "札幌或新千岁机场附近",
-            "bookingId": "hotel-day-13"
-          },
-          "transport": "JR，经泷川换乘；若当季有合适直达巴士可替换",
-          "distance": null,
-          "duration": "约3—4小时，按2027冬季班次确定",
-          "timeline": [
-            {
-              "place": "富良野",
-              "time": "上午",
-              "detail": "休息、整理行李",
-              "leg": ""
-            },
-            {
-              "bookingId": "train-furano-return",
-              "endpoint": "departure",
-              "detail": "经泷川换乘",
-              "showDuration": true
-            },
-            {
-              "bookingId": "train-furano-return",
-              "endpoint": "arrival",
-              "detail": "入住返程前一晚酒店",
+              "place": "女满别 / 网走",
+              "time": "仅流冰条件极好时",
+              "detail": "1月23日从札幌飞女满别，接驳至网走；订票前核对流冰与天气",
               "leg": ""
             }
           ],
           "sights": [],
           "food": [],
           "reservations": [
-            "确认富良野至札幌 / 新千岁的冬季铁路或巴士班次"
+            "根据临近日期的流冰、天气与航班情况决定是否启用网走分支"
           ],
           "notes": [
-            "预留雪天延误余量；若返程航班较早，优先住新千岁机场附近"
+            "流冰不是固定行程；若不启用则继续住札幌"
+          ],
+          "weatherClothing": [],
+          "bookingIds": []
+        },
+        {
+          "id": "day-12",
+          "day": 12,
+          "date": "2027-01-24",
+          "title": "机动窗口 · 札幌／网走 → 东京",
+          "description": "默认从札幌飞东京；若前一天启用网走流冰分支，1月24日看流冰后从女满别直接飞东京，不返回札幌。夜宿东京。",
+          "accommodation": {
+            "area": "东京",
+            "bookingId": "hotel-day-13"
+          },
+          "transport": "默认札幌→东京航班；流冰分支网走→女满别Taxi／包车、女满别→东京航班",
+          "distance": null,
+          "duration": null,
+          "timeline": [
+            {
+              "place": "札幌 / 网走",
+              "time": "上午",
+              "detail": "默认札幌机动；网走分支按当天流冰和船只运营情况观测",
+              "leg": ""
+            },
+            {
+              "place": "新千岁 / 女满别机场",
+              "time": "下午或傍晚",
+              "detail": "分别从札幌或网走出发，飞往东京",
+              "leg": ""
+            },
+            {
+              "place": "东京",
+              "time": "晚上",
+              "detail": "入住东京酒店",
+              "leg": ""
+            }
+          ],
+          "sights": [],
+          "food": [],
+          "reservations": [
+            "临近日期决定札幌或女满别飞东京的衔接；确认航班与流冰船运营"
+          ],
+          "notes": [
+            "网走流冰行程仅在临近日期条件非常好时启用；该分支不返回札幌"
           ],
           "weatherClothing": [],
           "bookingIds": [
-            "train-furano-return",
+            "hotel-day-13"
+          ]
+        },
+        {
+          "id": "day-13",
+          "day": 13,
+          "date": "2027-01-25",
+          "title": "机动窗口 · 东京／热海早樱",
+          "description": "东京机动日；只有临近日期确认热海早樱花情很好，才安排东京—热海JR一日往返。无论是否启用热海，1月25日晚必须住东京。",
+          "accommodation": {
+            "area": "东京",
+            "bookingId": "hotel-day-13"
+          },
+          "transport": "东京市内轨道交通／Taxi；启用热海分支时东京⇄热海JR",
+          "distance": null,
+          "duration": null,
+          "timeline": [
+            {
+              "place": "东京",
+              "time": "上午",
+              "detail": "市内机动；若热海早樱花情很好，乘JR前往热海",
+              "leg": ""
+            },
+            {
+              "place": "热海",
+              "time": "仅花情很好时",
+              "detail": "早樱观赏，临行核对花情与开放情况",
+              "leg": ""
+            },
+            {
+              "place": "东京",
+              "time": "晚上",
+              "detail": "热海往返后回东京；必须住东京",
+              "leg": ""
+            }
+          ],
+          "sights": [],
+          "food": [],
+          "reservations": [
+            "确认东京酒店覆盖1月24日和25日晚"
+          ],
+          "notes": [
+            "热海早樱不是固定行程，只在临近日期花情很好时启用",
+            "1月25日晚无论如何住东京"
+          ],
+          "weatherClothing": [],
+          "bookingIds": [
             "hotel-day-13"
           ]
         },
@@ -1769,26 +1779,26 @@ const travelData = {
           "id": "day-14",
           "day": 14,
           "date": "2027-01-26",
-          "title": "新千岁 — 北京",
-          "description": "前往新千岁机场，飞北京。预留约3小时办理国际出发手续，另计雪天交通时间。",
+          "title": "东京 — 北京",
+          "description": "从东京机场飞北京，预留办理国际航班手续与东京市内去机场的时间；机场和班次待出票确认。",
           "accommodation": {
             "area": "",
             "bookingId": null
           },
-          "transport": "飞机",
+          "transport": "东京市内交通／Taxi、飞机",
           "distance": null,
           "duration": null,
           "timeline": [
             {
-              "place": "新千岁机场",
-              "time": "",
-              "detail": "",
+              "place": "东京机场",
+              "time": "待定",
+              "detail": "按实际航班提前办理出境手续",
               "leg": ""
             },
             {
               "place": "北京",
-              "time": "",
-              "detail": "",
+              "time": "待定",
+              "detail": "返程抵达",
               "leg": ""
             }
           ],
@@ -1798,7 +1808,7 @@ const travelData = {
           "notes": [],
           "weatherClothing": [],
           "bookingIds": [
-            "flight-chitose-beijing"
+            "flight-tokyo-beijing"
           ]
         }
       ],
@@ -1830,12 +1840,12 @@ const travelData = {
             ]
           },
           {
-            "id": "flight-chitose-beijing",
+            "id": "flight-tokyo-beijing",
             "number": null,
             "date": "2027-01-26",
             "airline": null,
             "departure": {
-              "place": "新千岁机场",
+              "place": "东京机场",
               "time": null,
               "terminal": null
             },
@@ -1849,98 +1859,13 @@ const travelData = {
             "checkInReminder": null,
             "price": null,
             "status": "planned",
-            "notes": "机场、班次及时间按实际出票确认。",
+            "notes": "东京机场、班次及时间按实际出票确认；1月25日晚住东京。",
             "dayIds": [
               "day-14"
             ]
           }
         ],
-        "trains": [
-          {
-            "id": "train-hokuto",
-            "number": "特急北斗（班次待确认）",
-            "date": "2027-01-18",
-            "departure": {
-              "place": "函馆",
-              "time": null
-            },
-            "arrival": {
-              "place": "洞爷",
-              "time": null
-            },
-            "duration": "约2小时",
-            "seat": "指定席待预订",
-            "price": null,
-            "status": "planned",
-            "notes": "全车指定席；2027年冬季班次公布后确认。",
-            "dayIds": [
-              "day-6"
-            ]
-          },
-          {
-            "id": "train-toya-sapporo",
-            "number": "特急北斗（班次待确认）",
-            "date": "2027-01-19",
-            "departure": {
-              "place": "洞爷",
-              "time": null
-            },
-            "arrival": {
-              "place": "札幌",
-              "time": null
-            },
-            "duration": "约2小时",
-            "seat": "指定席待预订",
-            "price": null,
-            "status": "planned",
-            "notes": "另计洞爷湖温泉至洞爷站约20分钟接驳。",
-            "dayIds": [
-              "day-7"
-            ]
-          },
-          {
-            "id": "train-otaru-asahikawa",
-            "number": "JR普通列车 + 特急（班次待确认）",
-            "date": "2027-01-22",
-            "departure": {
-              "place": "小樽",
-              "time": null
-            },
-            "arrival": {
-              "place": "旭川",
-              "time": null
-            },
-            "duration": "约2.5—3小时",
-            "seat": "札幌至旭川段指定席待预订",
-            "price": null,
-            "status": "planned",
-            "notes": "在札幌换乘。",
-            "dayIds": [
-              "day-10"
-            ]
-          },
-          {
-            "id": "train-furano-return",
-            "number": "JR富良野线 / 根室本线（班次待确认）",
-            "date": "2027-01-25",
-            "departure": {
-              "place": "富良野",
-              "time": null
-            },
-            "arrival": {
-              "place": "札幌或新千岁",
-              "time": null
-            },
-            "duration": "约3—4小时",
-            "seat": "特急段指定席待预订",
-            "price": null,
-            "status": "planned",
-            "notes": "通常经泷川换乘；以2027年冬季运行计划为准。",
-            "dayIds": [
-              "day-13"
-            ]
-          }
-        ],
+        "trains": [],
         "hotels": [
           {
             "id": "hotel-day-1",
@@ -2013,80 +1938,35 @@ const travelData = {
             "name": null,
             "city": "札幌",
             "checkInDate": "2027-01-19",
-            "checkOutDate": "2027-01-21",
-            "address": null,
-            "checkInTime": null,
-            "checkOutTime": null,
-            "price": null,
-            "status": "planned",
-            "notes": "札幌住2晚。",
-            "dayIds": [
-              "day-7",
-              "day-8"
-            ]
-          },
-          {
-            "id": "hotel-day-9",
-            "name": null,
-            "city": "小樽",
-            "checkInDate": "2027-01-21",
-            "checkOutDate": "2027-01-22",
-            "address": null,
-            "checkInTime": null,
-            "checkOutTime": null,
-            "price": null,
-            "status": "planned",
-            "notes": "小樽住1晚，便于看雪夜。",
-            "dayIds": [
-              "day-9"
-            ]
-          },
-          {
-            "id": "hotel-day-10",
-            "name": null,
-            "city": "旭川",
-            "checkInDate": "2027-01-22",
             "checkOutDate": "2027-01-24",
             "address": null,
             "checkInTime": null,
             "checkOutTime": null,
             "price": null,
             "status": "planned",
-            "notes": "旭川住2晚，方便动物园和包车出发。",
+            "notes": "札幌为1月19—23日晚的默认住宿；1月23日仅在流冰条件极好时改住网走。",
             "dayIds": [
+              "day-7",
+              "day-8",
+              "day-9",
               "day-10",
               "day-11"
             ]
           },
           {
-            "id": "hotel-day-12",
-            "name": null,
-            "city": "富良野",
-            "checkInDate": "2027-01-24",
-            "checkOutDate": "2027-01-25",
-            "address": null,
-            "checkInTime": null,
-            "checkOutTime": null,
-            "price": null,
-            "status": "planned",
-            "notes": "建议选择森林精灵露台附近或提供接送的酒店。",
-            "dayIds": [
-              "day-12"
-            ]
-          },
-          {
             "id": "hotel-day-13",
             "name": null,
-            "city": "札幌或新千岁机场附近",
-            "checkInDate": "2027-01-25",
+            "city": "东京",
+            "checkInDate": "2027-01-24",
             "checkOutDate": "2027-01-26",
             "address": null,
             "checkInTime": null,
             "checkOutTime": null,
             "price": null,
             "status": "planned",
-            "notes": "按返程航班时间选择；早班机优先住机场附近。",
+            "notes": "东京住1月24日、25日两晚；1月25日晚必须在东京。",
             "dayIds": [
+              "day-12",
               "day-13"
             ]
           }
@@ -2189,7 +2069,7 @@ const travelData = {
         {
           "id": "international-flights",
           "title": "落实往返国际航班",
-          "description": "北京至东京、新千岁至北京。",
+          "description": "北京至东京、东京至北京；1月24日根据流冰分支衔接札幌或女满别飞东京。",
           "deadline": null,
           "deadlineLabel": "出发前",
           "priority": "high",
@@ -2199,7 +2079,7 @@ const travelData = {
         {
           "id": "ginzan-transfer",
           "title": "确认银山旅馆接送",
-          "description": "与大石田列车时间衔接。",
+          "description": "1月15日确认旅馆接送；1月16日安排银山温泉直接包车到仙台站。",
           "deadline": null,
           "deadlineLabel": "出发前",
           "priority": "high",
@@ -2212,7 +2092,7 @@ const travelData = {
         {
           "id": "long-train-journeys",
           "title": "安排长途铁路",
-          "description": "银山至函馆、函馆至札幌等连接。",
+          "description": "确认东京至大石田、仙台至新函馆北斗／函馆的新干线与JR换乘。",
           "deadline": null,
           "deadlineLabel": "出发前",
           "priority": "high",
@@ -2221,20 +2101,20 @@ const travelData = {
         },
         {
           "id": "biei-transport",
-          "title": "预订美瑛—富良野冬季包车",
-          "description": "覆盖旭川出发、圣诞树、白金青池点灯、森林精灵露台、富良野结束。",
+          "title": "预订札幌往返旭川与美瑛包车",
+          "description": "1月22日札幌酒店往返：旭山动物园、雪原、Christmas Tree、白须瀑布、白金青池点灯；确认夜间返程。",
           "deadline": null,
           "deadlineLabel": "出发前",
           "priority": "high",
           "completed": false,
           "dayIds": [
-            "day-11"
+            "day-10"
           ]
         },
         {
           "id": "toya-stay",
           "title": "预订洞爷湖温泉住宿",
-          "description": "确认洞爷站接送、湖景房与晚餐时间。",
+          "description": "确认1月18日湖景、晚餐时间及函馆至洞爷湖的包车。",
           "deadline": null,
           "deadlineLabel": "出发前",
           "priority": "high",
@@ -2244,14 +2124,16 @@ const travelData = {
           ]
         },
         {
-          "id": "furano-return",
-          "title": "确认富良野返程交通",
-          "description": "核对2027冬季JR或巴士班次，并预留雪天延误时间。",
+          "id": "flexible-days",
+          "title": "确认机动窗口",
+          "description": "临近日期根据网走流冰和热海早樱花情决定分支；1月24日抵东京，25日晚必须住东京。",
           "deadline": null,
           "deadlineLabel": "出发前",
           "priority": "high",
           "completed": false,
           "dayIds": [
+            "day-11",
+            "day-12",
             "day-13"
           ]
         }
@@ -2585,26 +2467,27 @@ const travelData = {
         {
           "id": "winter-route",
           "icon": "🚐",
-          "title": "美瑛与富良野交通",
-          "content": "圣诞树、白金青池和森林精灵露台分散，且1月道路积雪。优先预订冬季包车或带司机车辆，不建议自行驾车；圣诞树周边为私人农田，禁止进入雪地和路边停车。"
+          "title": "美瑛冬季包车",
+          "content": "1月22日从札幌酒店包车往返旭山动物园、美瑛雪原、Christmas Tree、白须瀑布与白金青池点灯；车程长，保留天气与夜间回程余量。Christmas Tree周边为私人农田，禁止进入雪地和路边停车。"
         }
       ],
       "practicalNotes": [
         {
           "title": "交通与住宿",
           "items": [
-            "优先锁定银山温泉和洞爷湖温泉住宿；银山接送时间需与大石田列车衔接，洞爷湖酒店优先选择提供洞爷站接送的方案。",
-            "函馆至洞爷、洞爷至札幌均可乘特急北斗；2027年班次公布后预订指定席。",
-            "旭川住两晚，先完整游览旭山动物园，再从旭川包车经美瑛、白金前往富良野，避免冬季夜间折返。"
+            "1月15日银山温泉住一晚，16日从旅馆直接包车到仙台，再乘东北／北海道新干线至新函馆北斗并换乘JR到函馆。",
+            "1月18日函馆包车直达洞爷湖，19日上午慢游后约10:30—11:00包车去札幌。",
+            "1月21日小樽当天往返札幌；22日札幌酒店包车往返旭山动物园与美瑛；1月23日默认住札幌，24日和25日晚住东京。",
+            "城市间优先JR／新干线；短距离景区接驳优先Taxi／包车，交通班次与冰雪路况临行复核。"
           ]
         },
         {
-          "title": "开放时间与天气",
+          "title": "机动窗口与天气",
           "items": [
-            "明治神宫、开拓村和北海道博物馆冬季闭馆较早，2027年开放时间以官方通知为准。",
-            "函馆山与天狗山缆车可能受风雪影响，分别以港区和运河散步作为备选。",
-            "白金青池1月通常结冰覆雪，主要观看冬季点灯；孤独的圣诞树位于私人农地，禁止进入雪地或路边停车。",
-            "洞爷湖冬季观光巴士和游船以当季公告为准；恶劣天气时保留湖畔散步与温泉。"
+            "1月23—25日机动：仅临近日期确认流冰状况非常好时，23日飞女满别／网走，24日看流冰后女满别直飞东京。",
+            "只有临近日期热海早樱花情很好时，才从东京于1月25日往返热海；当晚必须住东京。",
+            "1月18日昭和新山、有珠山视运营和天气游览，日落前停止赶景点，留给洞爷湖与羊蹄山蓝调。",
+            "函馆山与天狗山缆车受风雪影响；白金青池点灯时间与冬季道路通行临行核对。"
           ]
         }
       ],
@@ -2628,11 +2511,6 @@ const travelData = {
           "JR东日本：仙台站班表入口",
           "https://timetables.jreast.co.jp/timetable/list0913.html",
           "验证转车方向，实际班次另核。"
-        ],
-        [
-          "JR北海道：特急北斗",
-          "https://www.jrhokkaido.co.jp/train/tr003_01.html",
-          "函馆—札幌及指定席说明。"
         ],
         [
           "北海道开拓村",
@@ -2660,11 +2538,6 @@ const travelData = {
           "函馆、札幌与洞爷湖温泉之间的铁路和巴士接驳。"
         ],
         [
-          "洞爷湖温泉观光协会：冬季巴士",
-          "https://www.laketoya.com/en/event/winterbus/",
-          "往年1月4日至2月25日运营，2027年班次另核。"
-        ],
-        [
           "旭山动物园：2027冬季开放时间",
           "https://www.city.asahikawa.hokkaido.jp/asahiyamazoo/event/event202612.html",
           "2027年1月2日至4月7日10:30—15:30，15:00停止入园。"
@@ -2673,11 +2546,6 @@ const travelData = {
           "美瑛观光协会：圣诞树",
           "https://www.biei-hokkaido.jp/en/facility/christmas-tree",
           "冬季应使用出租车或观光巴士，禁止进入私人农田与路边停车。"
-        ],
-        [
-          "新富良野王子酒店：森林精灵露台",
-          "https://www.princehotels.co.jp/shinfurano/facility/ningle_terrace/",
-          "当前冬季营业12:00—20:45，2027年临行复核。"
         ]
       ]
     },
